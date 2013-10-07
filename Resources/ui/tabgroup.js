@@ -7,7 +7,7 @@ exports.create = function() {
 	var tab1 = Titanium.UI.createTab({
 		title : 'Vorlesungen',
 		icon : 'icon/user.png',
-		window : require('ui/vorlesungen.window').create()
+		window : require('ui/lectures.window').create()
 	});
 	var tab2 = Titanium.UI.createTab({
 		title : 'Äpfel-DB',

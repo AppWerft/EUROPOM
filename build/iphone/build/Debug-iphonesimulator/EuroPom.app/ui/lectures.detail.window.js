@@ -1,0 +1,1 @@
+/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/lectures.detail.window.js

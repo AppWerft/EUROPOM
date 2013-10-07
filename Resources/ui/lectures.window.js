@@ -14,7 +14,7 @@ exports.create = function() {
 		defaultItemTemplate : 'plants',
 	});
 	self.listView.addEventListener('itemclick', function(_e) {
-		var win = require('ui/eventdetail.window').create(_e.itemId);
+		var win = require('ui/lectures.detail.window').create(_e.itemId);
 		if (Ti.Android)
 			win.open();
 		else

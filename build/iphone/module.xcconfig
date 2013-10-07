@@ -1,1 +1,4 @@
 // this is a generated file - DO NOT EDIT
+
+COM_KUCHBEE_QUICKPDF_OTHER_LDFLAGS=$(inherited) -framework ImageIO -framework MessageUI -framework QuartzCore -framework CoreGraphics -framework UIKit
+OTHER_LDFLAGS=$(inherited) $(COM_KUCHBEE_QUICKPDF_OTHER_LDFLAGS) 

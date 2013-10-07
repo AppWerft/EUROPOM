@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 2.0
+apiversion: 3
+description: Fast Quick Pdf Reader for iOS Applications
+author: Shahid Nasrullah
+license: This software is licensed under "Apache License Version 2.0, January 2004"
+copyright: Copyright (c) 2013 by KuchBee
+
+
+# these should not be edited
+name: quickpdf
+moduleid: com.kuchbee.quickpdf
+guid: a97319c8-02c2-4b1f-944b-967f24a6ebb7
+platform: iphone
+minsdk: 2.1.4.GA

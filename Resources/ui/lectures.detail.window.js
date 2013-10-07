@@ -103,7 +103,7 @@ exports.create = function(_event) {
 					scrollType : 'horizontal',
 					showHorizontalScrollIndicator : true,
 					width : Ti.UI.FILL,
-					backgroundColor : '#ccc',
+					backgroundColor : '#666',
 					contentWidth : Ti.UI.SIZE,
 					//	layout : 'horizontal',
 					contentHeight : '100dp'
@@ -116,15 +116,14 @@ exports.create = function(_event) {
 						width : Ti.UI.SIZE,
 						left : i * 136 + 'dp',
 						top : 0,
-						image : path + '-' + i + '.png'
+						image : path + '-' + i + '.png' // output of imagemagick
 					});
 					gallery.add(thumb);
-					console.log(path + '-' + i + '.png');
 				}
 				gallery.addEventListener('click', function() {
+					console.log('Info: click on pdf thumb gallery received');
 					var progresswidget = require('ui/progress.widget').create();
 					self.add(progresswidget);
-					//progress.open();
 					require('ui/remotepdfviewer').createPDFViewer(event.slides, progresswidget);
 				});
 			}

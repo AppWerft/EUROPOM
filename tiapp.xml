@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>de.appwerft.europom</id>
     <name>EuroPom</name>
     <version>1.6</version>
@@ -17,7 +18,8 @@
     <guid>93e4e604-da8a-4883-9615-1c23b1a1e239</guid>
     <property name="ti.ui.defaultunit" type="string">system</property>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="15" android:versionName="1.15" package="de.appwerft.europom" xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest android:versionCode="15" android:versionName="1.15"
+            package="de.appwerft.europom" xmlns:android="http://schemas.android.com/apk/res/android">
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -25,20 +27,33 @@
             <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
             <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
             <uses-permission android:name="de.appwerft.europom.permission.MAPS_RECEIVE"/>
-            <permission android:name="de.appwerft.europom.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+            <permission
+                android:name="de.appwerft.europom.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
             <application>
                 <!--	<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAGY7qt05NcfPC6bcLa6YQ7wmffYCKP99M"/>
 				-->
-                <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBVO4iCjA0PttSQAkmq6_GbgWC9n40lTSA"/>
-                <activity android:configChanges="keyboardHidden" android:label="" android:name="ti.modules.titanium.media.TiVideoActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-                <activity android:configChanges="keyboardHidden" android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
-                <activity android:configChanges="keyboardHidden" android:name="org.appcelerator.titanium.TiTranslucentActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent"/>
-                <activity android:configChanges="keyboardHidden" android:name="org.appcelerator.titanium.TiModalActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent"/>
-                <activity android:configChanges="keyboardHidden" android:name="ti.modules.titanium.ui.TiTabActivity" android:screenOrientation="portrait"/>
+                <meta-data
+                    android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBVO4iCjA0PttSQAkmq6_GbgWC9n40lTSA"/>
+                <activity android:configChanges="keyboardHidden"
+                    android:label=""
+                    android:name="ti.modules.titanium.media.TiVideoActivity"
+                    android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+                <activity android:configChanges="keyboardHidden"
+                    android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
+                <activity android:configChanges="keyboardHidden"
+                    android:name="org.appcelerator.titanium.TiTranslucentActivity"
+                    android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent"/>
+                <activity android:configChanges="keyboardHidden"
+                    android:name="org.appcelerator.titanium.TiModalActivity"
+                    android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent"/>
+                <activity android:configChanges="keyboardHidden"
+                    android:name="ti.modules.titanium.ui.TiTabActivity" android:screenOrientation="portrait"/>
                 <activity android:name="ti.modules.titanium.ui.android.TiPreferencesActivity"/>
                 <service android:exported="false" android:name="org.appcelerator.titanium.analytics.TiAnalyticsService"/>
-                <activity android:configChanges="keyboardHidden" android:name="ti.modules.titanium.ui.TiTabActivity" android:screenOrientation="portrait"/>
-                <activity android:configChanges="keyboardHidden" android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
+                <activity android:configChanges="keyboardHidden"
+                    android:name="ti.modules.titanium.ui.TiTabActivity" android:screenOrientation="portrait"/>
+                <activity android:configChanges="keyboardHidden"
+                    android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
             </application>
         </manifest>
     </android>
@@ -55,6 +70,7 @@
     </iphone>
     <modules>
         <module platform="android">ti.map</module>
+        <module platform="iphone">com.kuchbee.quickpdf</module>
     </modules>
     <deployment-targets>
         <target device="blackberry">false</target>

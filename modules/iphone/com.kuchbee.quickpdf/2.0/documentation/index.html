@@ -1,0 +1,50 @@
+<h1>Quick PDF Module</h1>
+<h2>Description</h2>
+<p>Quick View PDF module enables pdf reading capability of ios applications. This module works on ipod, ipad and iphone. A quick look view at the bottom allows to switch between pages. Other functionalities like email sending, bookmarks a page and printing is available. Very efficient and easy to use. Just one line of code and you are done.</p>
+<h2>Accessing the quickpdf Module</h2>
+<p>To access this module from JavaScript, you would do the following:</p>
+<pre><code>var quickpdf = require("com.kuchbee.quickpdf");
+</code></pre>
+<p>The quickpdf variable is a reference to the Module object.<br />
+</p>
+<h2>Functions</h2>
+<p>1- openPDF:</br>
+    This function opens a pdf file from the resources directory of the project or from the document directory of the installed application.</br>
+    Parameters:</br>
+        It takes one dictionary parameter wich has following key-value pair values.</br>
+        a) file (string): The name of the file without extension. Please don't provide '.pdf' extension in the, just name of the file.</br>
+        b) password (string): If your pdf file is password protected, you can provide password to open file.</br>
+        c) isMailEnabled (bool): If this is true then email option will be availabe otherwise not.
+        d) loadFileFrom (string): If your file exist in the resources directory of the project then provide 'resources' and if your file exist in the document directory of the installed application then provide 'document' value. Currently these two value are valid and in the later version other support will be added.</br>
+        e) close (callback function): If you want to get notified when pdf file is closed then this callback function will be called when pdf will be closed.</br></p>
+<h2>Usage</h2>
+<p>// Create a Window </br>
+var win = Ti.UI.createWindow({</br>
+    backgroundColor : 'white'</br>
+});</br></p>
+<p>var quickpdfreader = require('com.kuchbee.quickpdf');</br>
+Ti.API.info("module is =&gt; " + quickpdfreader);</br></p>
+<p>var button = Ti.UI.createButton({
+    top:10,
+    left:10,
+    right:10,
+    title:'Open Pdf File'
+});</br></p>
+<p>win.add(button);</br>
+button.addEventListener('click',function(e){</br>
+    quickpdfreader.openPDF({</br>
+        file: 'app',
+        password: '',
+        loadFileFrom: 'document',</br>
+        close: function(e){</br>
+            alert('closed');
+        }</br>
+    });</br>
+});</br></p>
+<p>win.open();</p>
+<h2>Author</h2>
+<p>Shahid Nasrullah </br>
+Contact: </br>
+shahid.ansrullah@yahoo.com</p>
+<h2>License</h2>
+<p>This software is licensed under "Apache License Version 2.0, January 2004"</p>
