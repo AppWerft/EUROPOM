@@ -41,7 +41,7 @@
 -(void)layoutSubviews
 {
     if (!layingOut && !singleLayout) {
-        [controller layoutSubviewsForInterfaceOrientation:[[UIApplication sharedApplication] statusBarOrientation]  withAnimation:YES];
+        [controller layoutSubviewsForInterfaceOrientation:[[[TiApp app] controller] windowOrientation]  withAnimation:YES];
     }
     else {
         [super layoutSubviews];

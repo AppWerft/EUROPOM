@@ -15,7 +15,7 @@
 @interface TiUITabGroup : TiUIView<UITabBarControllerDelegate,UINavigationControllerDelegate> {
 @private
 	UITabBarController *controller;
-	TiUITabProxy *focusedTabProxy;
+	TiUITabProxy *focused;
 	BOOL allowConfiguration;
 	NSString* editTitle;
 	
@@ -29,10 +29,10 @@
 
 -(UITabBar*)tabbar;
 
+-(void)focusVisibleWindow;
+-(void)blurVisibleWindow;
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 
--(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
--(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
--(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
 @end
 
 #endif

@@ -267,8 +267,10 @@ MAKE_SYSTEM_PROP_DEPRECATED_REPLACED(AUTODETECT_CALENDAR,UIDataDetectorTypeCalen
 
 -(void)setOrientation:(id)mode
 {
-    DebugLog(@"Ti.UI.setOrientation is deprecated since 1.7.2 . Ignoring call.");
-    return;
+	UIInterfaceOrientation orientation = (UIInterfaceOrientation)[TiUtils orientationValue:mode def:(UIDeviceOrientation)UIInterfaceOrientationPortrait];
+	TiThreadPerformOnMainThread(^{
+		[[TiApp controller] manuallyRotateToOrientation:orientation duration:[[TiApp controller] suggestedRotationDuration]];
+	}, NO);
 }
 
 MAKE_SYSTEM_PROP(PORTRAIT,UIInterfaceOrientationPortrait);

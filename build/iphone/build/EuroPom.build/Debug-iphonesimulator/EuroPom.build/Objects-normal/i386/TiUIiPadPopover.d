@@ -31,7 +31,6 @@ dependencies: \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/LayoutConstraint.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiGradient.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewController.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiControllerProtocols.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewProxy.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiRect.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewTemplate.h

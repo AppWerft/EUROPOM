@@ -1,1 +1,1 @@
-/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/remotepdfviewer.js
+/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/iphone/ui/remotepdfviewer.js

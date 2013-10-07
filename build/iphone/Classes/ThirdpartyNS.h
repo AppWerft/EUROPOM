@@ -211,14 +211,14 @@
 #endif
 #ifndef EstimateBas64DecodedDataSize
 // libtiverify dependency
-// EstimateBas64DecodedDataSize is now TI_EstimateBas64DecodedDataSize
+//#define EstimateBas64DecodedDataSize __TI_NS_SYMBOL(EstimateBas64DecodedDataSize)
 #endif
 #ifndef Base64EncodeData
 #define Base64EncodeData __TI_NS_SYMBOL(Base64EncodeData)
 #endif
 #ifndef Base64DecodeData
 // libtiverify dependency
-// Base64DecodeData is now TI_Base64DecodeData
+//#define Base64DecodeData __TI_NS_SYMBOL(Base64DecodeData)
 #endif
 
 // SBJSON

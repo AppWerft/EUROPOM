@@ -81,7 +81,7 @@ DEFINE_DEF_BOOL_PROP(suppressReturn,YES);
 	}
 }
 
--(BOOL)focused:(id)unused
+-(BOOL)focused
 {
 	BOOL result=NO;
 	if ([self viewAttached])
@@ -96,8 +96,8 @@ DEFINE_DEF_BOOL_PROP(suppressReturn,YES);
 {
 	if (![[self valueForKey:@"value"] isEqual:newValue])
 	{
+        [self contentsWillChange];
 		[self replaceValue:newValue forKey:@"value" notification:NO];
-		[self contentsWillChange];
 		[self fireEvent:@"change" withObject:[NSDictionary dictionaryWithObject:newValue forKey:@"value"]];
 	}
 }

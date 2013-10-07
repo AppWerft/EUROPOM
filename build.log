@@ -1,131 +1,16 @@
 Logfile initialized
 [INFO] logfile = /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build.log
-[DEBUG] /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/builder.py install EuroPom /Applications/android-sdk-mac_x86 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom de.appwerft.europom 11
-[INFO] Titanium SDK version: 3.1.3 (09/18/13 12:00 222f4d1)
+[DEBUG] /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/builder.py install EuroPom /Applications/android-sdk-mac_x86 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom de.appwerft.europom 11
+[INFO] Titanium SDK version: 3.1.2 (08/14/13 12:45 5ceaff8)
 [DEBUG] Waiting for device to be ready ...
-[TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.033436 seconds on emulator to get ready
-[DEBUG] de.appwerft.europom installed? False
-[INFO] Copying CommonJS modules...
-[INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/feed.window.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/feed.window.js
-[TRACE] COPYING MODIFIED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/cachedxhr.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/vendor/cachedxhr.js
-[DEBUG] LiveView not enabled
-[TRACE] Generating Java Classes
-[DEBUG] Processing Android resource drawables
-[DEBUG] copying app icon: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/appicon.png
-[DEBUG] generating theme.xml
-[DEBUG] found splash screen at /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/default.png
-[TRACE] Writing out AndroidManifest.xml
-[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomActivity.java to javac build list
-[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomAppInfo.java to javac build list
-[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomApplication.java to javac build list
-[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/Manifest.java to javac build list
-[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/R.java to javac build list
-[DEBUG] Building Java Sources: "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomActivity.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomAppInfo.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomApplication.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/Manifest.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/R.java"
-[INFO] Compiling Android Resources... This could take some time
-[DEBUG] Android classes.dex built
-[DEBUG] creating unsigned apk: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/app-unsigned.apk
-[DEBUG] from resource zip => assets/Resources/assets/apples.png
-[DEBUG] from resource zip => assets/Resources/assets/bg.png
-[DEBUG] from resource zip => assets/Resources/assets/bigbg.jpg
-[DEBUG] from resource zip => assets/Resources/assets/bosch.png
-[DEBUG] from resource zip => assets/Resources/assets/bottomlogo.png
-[DEBUG] from resource zip => assets/Resources/assets/brandt.png
-[DEBUG] from resource zip => assets/Resources/assets/dummy.jpg
-[DEBUG] from resource zip => assets/Resources/assets/goergens.png
-[DEBUG] from resource zip => assets/Resources/assets/leer.jpg
-[DEBUG] from resource zip => assets/Resources/assets/leer.png
-[DEBUG] from resource zip => assets/Resources/assets/player.png
-[DEBUG] from resource zip => assets/Resources/assets/pmlv.png
-[DEBUG] from resource zip => assets/Resources/assets/schirarend.png
-[DEBUG] from resource zip => assets/Resources/assets/start.png
-[DEBUG] from resource zip => assets/Resources/assets/washof.png
-[DEBUG] from resource zip => assets/Resources/assets/wicklein.png
-[DEBUG] from resource zip => assets/Resources/fonts/SIL Open Font License.txt
-[DEBUG] from resource zip => assets/Resources/fonts/Vollkorn-Bold.ttf
-[DEBUG] from resource zip => assets/Resources/fonts/Vollkorn-BoldItalic.ttf
-[DEBUG] from resource zip => assets/Resources/fonts/Vollkorn-Italic.ttf
-[DEBUG] from resource zip => assets/Resources/fonts/Vollkorn-Regular.ttf
-[DEBUG] from resource zip => assets/Resources/icon/mapmarker.png
-[DEBUG] from resource zip => assets/Resources/icon/plant.png
-[DEBUG] from resource zip => assets/Resources/icon/pvicon.png
-[DEBUG] from resource zip => assets/Resources/icon/treeicon.png
-[DEBUG] from resource zip => assets/Resources/icon/user.png
-[DEBUG] from resource zip => assets/Resources/model/events.json
-[DEBUG] from resource zip => assets/Resources/model/pommes.js
-[DEBUG] from resource zip => assets/Resources/model/pommes.json
-[DEBUG] from resource zip => assets/Resources/model/sorten.json
-[DEBUG] from resource zip => assets/Resources/ui/TEMPLATES.js
-[DEBUG] from resource zip => assets/Resources/ui/apfelDB.window.js
-[DEBUG] from resource zip => assets/Resources/ui/audioplayer.widget.js
-[DEBUG] from resource zip => assets/Resources/ui/cachedimage.widget.js
-[DEBUG] from resource zip => assets/Resources/ui/detail.window.js
-[DEBUG] from resource zip => assets/Resources/ui/eventdetail.window.js
-[DEBUG] from resource zip => assets/Resources/ui/feed.window.js
-[DEBUG] from resource zip => assets/Resources/ui/gmap.widget.js
-[DEBUG] from resource zip => assets/Resources/ui/gmap.window.js
-[DEBUG] from resource zip => assets/Resources/ui/kataster.window.js
-[DEBUG] from resource zip => assets/Resources/ui/progress.widget.js
-[DEBUG] from resource zip => assets/Resources/ui/remotepdfviewer.js
-[DEBUG] from resource zip => assets/Resources/ui/tabgroup.js
-[DEBUG] from resource zip => assets/Resources/ui/vorlesungen.window.js
-[DEBUG] from resource zip => assets/Resources/ui/web.window.js
-[DEBUG] from resource zip => assets/Resources/vendor/XMLTools.js
-[DEBUG] from resource zip => assets/Resources/vendor/cachedxhr.js
-[DEBUG] from resource zip => assets/Resources/vendor/google.oauth.js
-[DEBUG] from resource zip => assets/Resources/vendor/multisocial.api.js
-[DEBUG] from resource zip => assets/Resources/vendor/oauth.adapter.js
-[DEBUG] from resource zip => assets/Resources/vendor/oauth.lib.js
-[DEBUG] from resource zip => assets/Resources/vendor/ti.kenburns.js
-[DEBUG] from resource zip => assets/Resources/vendor/video.widget.js
-[DEBUG] from resource zip => assets/Resources/512.png
-[DEBUG] from resource zip => assets/Resources/app.js
-[DEBUG] from resource zip => assets/Resources/appicon.png
-[DEBUG] from resource zip => assets/Resources/default.png
-[DEBUG] from resource zip => assets/app.json
-[DEBUG] from resource zip => assets/index.json
-[DEBUG] from resource zip => res/drawable/appicon.png
-[DEBUG] from resource zip => res/drawable/background.png
-[DEBUG] from resource zip => res/drawable/btn_check_buttonless_on_64.png
-[DEBUG] from resource zip => res/drawable/btn_more_64.png
-[DEBUG] from resource zip => res/drawable/disclosure_64.png
-[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
-[DEBUG] from resource zip => res/layout/titanium_ui_list_header_or_footer.xml
-[DEBUG] from resource zip => res/layout/titanium_ui_list_item.xml
-[DEBUG] from resource zip => AndroidManifest.xml
-[DEBUG] from resource zip => resources.arsc
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/build.properties
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/background.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_64.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_64.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/thirdparty.jar => org/apache/Commons-NOTICE.txt
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/thirdparty.jar => org/apache/mime4j-NOTICE.txt
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.js
-[DEBUG] from JAR /Users/rainerschleevoigt/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.min.js
-[DEBUG] installing native lib: /Users/rainerschleevoigt/Library/Application Support/Titanium/modules/android/ti.map/2.1.2/libs/armeabi/libti.map.so
-[DEBUG] installing native lib: /Users/rainerschleevoigt/Library/Application Support/Titanium/modules/android/ti.map/2.1.2/libs/armeabi-v7a/libti.map.so
-[DEBUG] installing native lib: /Users/rainerschleevoigt/Library/Application Support/Titanium/modules/android/ti.map/2.1.2/libs/x86/libti.map.so
-[DEBUG] installing native SDK libs
-[DEBUG] Waiting for device to be ready ...
-[TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.068197 seconds on emulator to get ready
-[INFO] Installing application on device
-[INFO] Application installed. Launch from drawer on Home Screen
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[ERROR] Timed out waiting for device to be ready, you may try reconnecting the USB cable

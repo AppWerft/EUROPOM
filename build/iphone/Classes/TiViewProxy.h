@@ -39,7 +39,7 @@
 /**
  Tells if this proxy is currently focused
  */
-- (BOOL)focused:(id)unused;
+- (BOOL)focused;
 
 #pragma mark Private internal APIs.
 

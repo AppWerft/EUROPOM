@@ -31,6 +31,8 @@
 //Internal values
 -(void)noteValueChange:(NSString *)newValue;
 
+-(BOOL)focused;
+
 @property(nonatomic,readwrite,assign)	BOOL suppressFocusEvents;
 
 @end

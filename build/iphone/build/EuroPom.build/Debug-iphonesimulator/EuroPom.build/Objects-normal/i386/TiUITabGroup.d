@@ -37,6 +37,8 @@ dependencies: \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiTab.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiTabGroup.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiWindowProxy.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUIWindow.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewController.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiControllerProtocols.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUITabController.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiTabController.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUITabGroupProxy.h

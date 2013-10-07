@@ -35,9 +35,9 @@ dependencies: \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiRect.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewTemplate.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewController.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiControllerProtocols.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUIiPadSplitWindowProxy.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiWindowProxy.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiTab.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiTabGroup.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUIWindow.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUIiOSDocumentViewerProxy.h

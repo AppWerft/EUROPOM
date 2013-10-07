@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUIiOSNavWindowProxy.m \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUIiOSNavWindowProxy.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUITabController.m \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUITabController.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiWindowProxy.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewProxy.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiProxy.h \
@@ -36,14 +36,15 @@ dependencies: \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewTemplate.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiTab.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiTabGroup.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewController.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiControllerProtocols.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUIiOSNavWindow.h \
   /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUIWindow.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiApp.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiHost.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/Bridge.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiStylesheet.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/KrollBridge.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/XHRBridge.h \
-  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiRootViewController.h
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiViewController.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiUITabProxy.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/TiTabController.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/ImageLoader.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/ASI/ASIHTTPRequest.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/ASI/ASIHTTPRequestConfig.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/ASI/ASIHTTPRequestDelegate.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/ASI/ASIProgressDelegate.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/ASI/ASICacheDelegate.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/ASI/ASINetworkQueue.h \
+  /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/Classes/Webcolor.h

@@ -13,34 +13,41 @@
 #import "TiWindowProxy.h"
 
 @class TiUITabGroupProxy;
+@class TiUITabController;
+@class TiWindowProxy;
 
 @interface TiUITabProxy : TiViewProxy<TiTab,UINavigationControllerDelegate,TiOrientationController> {
 @private
 	UINavigationController *controller;
-	TiWindowProxy *rootWindow;
-    TiWindowProxy *current;
+	TiUITabController *rootController;
 	//This is an assign only property. TabGroup retains instances of tab.
 	TiUITabGroupProxy *tabGroup;
+	TiUITabController *current;
     
-	NSMutableArray* controllerStack;
+    NSArray* controllerStack;
+    NSMutableArray* closingWindows;
     
 	BOOL opening;
 	BOOL systemTab;
 	BOOL transitionIsAnimating;
-	BOOL hasFocus;
-	BOOL iconOriginal;
-	BOOL activeIconOriginal;
 	
 	id<TiOrientationController> parentOrientationController;
 }
 
+@property(nonatomic,readwrite,assign)	id<TiOrientationController> parentOrientationController;
+-(void)childOrientationControllerChangedFlags:(id<TiOrientationController>) orientationController;
+
+-(UINavigationController*)controller;
 -(void)setTabGroup:(TiUITabGroupProxy*)proxy;
 -(void)removeFromTabGroup;
--(void)closeWindowProxy:(TiWindowProxy *)window animated:(BOOL)animated;
+-(void)closeWindow:(TiWindowProxy *)window animated:(BOOL)animated;
+-(void)windowClosing:(TiWindowProxy*)window animated:(BOOL)animated;
 
 #pragma mark Public APIs
 
 -(TiProxy*)tabGroup;
+-(void)open:(id)args;
+-(void)close:(id)args;
 -(void)setTitle:(id)title;
 -(void)setIcon:(id)title;
 -(void)setBadge:(id)title;

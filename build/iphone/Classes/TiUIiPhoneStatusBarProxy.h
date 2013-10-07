@@ -20,7 +20,6 @@
 @property(nonatomic,readonly)	NSNumber *GRAY;
 @property(nonatomic,readonly)	NSNumber *OPAQUE_BLACK;
 @property(nonatomic,readonly)	NSNumber *TRANSLUCENT_BLACK;
-@property(nonatomic,readonly)	NSNumber *LIGHT_CONTENT;
 
 @property(nonatomic,readonly)	NSNumber *ANIMATION_STYLE_NONE;
 @property(nonatomic,readonly)	NSNumber *ANIMATION_STYLE_SLIDE;

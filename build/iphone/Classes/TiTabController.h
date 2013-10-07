@@ -6,17 +6,15 @@
  * 
  * WARNING: This is generated code. Modify at your own risk and without support.
  */
-#ifdef USE_TI_UIIOSNAVIGATIONWINDOW
-#import "TiUIiOSNavWindow.h"
-#import "TiUIiOSNavWindowProxy.h"
 
-@implementation TiUIiOSNavWindow
+/**
+ The protocol for tab controller.
+ */
+@protocol TiTabController
 
--(void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds
-{
-    [(TiUIiOSNavWindowProxy*)[self proxy] setFrame:bounds];
-    [super frameSizeChanged:frame bounds:bounds];
-}
+/**
+ Returns the window associated with the tab controller.
+ */
+-(id)window;
 
 @end
-#endif

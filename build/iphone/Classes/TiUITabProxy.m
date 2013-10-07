@@ -10,6 +10,9 @@
  
 #import "TiProxy.h"
 #import "TiUITabProxy.h"
+#import "TiUIViewProxy.h"
+#import "TiWindowProxy.h"
+#import "TiUITabController.h"
 #import "TiUITabGroupProxy.h"
 #import "TiUtils.h"
 #import "ImageLoader.h"
@@ -30,11 +33,12 @@
 
 -(void)_destroy
 {
+    RELEASE_TO_NIL(closingWindows);
     RELEASE_TO_NIL(controllerStack);
-    RELEASE_TO_NIL(rootWindow);
+	RELEASE_TO_NIL(rootController);
     RELEASE_TO_NIL(controller);
-    RELEASE_TO_NIL(current);
-    [super _destroy];
+	RELEASE_TO_NIL(current);
+	[super _destroy];
 }
 
 -(NSMutableDictionary*)langConversionTable
@@ -48,33 +52,71 @@
 	[self replaceValue:nil forKey:@"title" notification:NO];
 	[self replaceValue:nil forKey:@"icon" notification:NO];
 	[self replaceValue:nil forKey:@"badge" notification:NO];
-	[self replaceValue:NUMBOOL(YES) forKey:@"iconIsMask" notification:NO];
-	[self replaceValue:NUMBOOL(YES) forKey:@"activeIconIsMask" notification:NO];
 	[super _configure];
 }
 
-#pragma mark - Private methods
+-(TiUITabController *)rootController
+{
+	if (rootController == nil)
+	{
+		TiWindowProxy *window = [self valueForKey:@"window"];
+		[window setParentOrientationController:self];
+		rootController = [[TiUITabController alloc] initWithProxy:window tab:self];
+	}
+	return rootController;
+}
+
+-(UINavigationController*)controller
+{
+	if (controller==nil)
+	{
+		controller = [[UINavigationController alloc] initWithRootViewController:[self rootController]];
+		controller.delegate = self;
+		[TiUtils configureController:controller withObject:nil];
+		[self setTitle:[self valueForKey:@"title"]];
+		[self setIcon:[self valueForKey:@"icon"]];
+		[self setBadge:[self valueForKey:@"badge"]];
+	}
+	return controller;
+}
+
+-(void)setTabGroup:(TiUITabGroupProxy*)proxy
+{
+	if (proxy == tabGroup)
+	{
+		return;
+	}
+	for (TiViewController * thisController in [controller viewControllers])
+	{
+		if (![thisController isKindOfClass:[TiViewController class]])
+		{
+			continue;
+		}
+		[(TiWindowProxy *)[thisController proxy] _associateTab:nil navBar:nil tab:nil];
+	}
+	tabGroup = proxy;
+}
 
 -(void) cleanNavStack:(BOOL)removeTab
 {
     TiThreadPerformOnMainThread(^{
-        UIViewController* rootController = [self rootController];
         [controller setDelegate:nil];
         if ([[controller viewControllers] count] > 1) {
-            NSMutableArray* doomedVcs = [[controller viewControllers] mutableCopy];
+            NSMutableArray* doomedVcs = [[NSMutableArray arrayWithArray:[controller viewControllers]] retain];
             [doomedVcs removeObject:rootController];
             [controller setViewControllers:[NSArray arrayWithObject:rootController]];
             if (current != nil) {
                 RELEASE_TO_NIL(current);
-                current = [(TiWindowProxy*)[(TiViewController*)rootController proxy] retain];
+                current = [rootController retain];
             }
-            for (TiViewController* doomedVc in doomedVcs) {
-                [self closeWindowProxy:(TiWindowProxy *)[doomedVc proxy] animated:NO];
+            for (TiUITabController* doomedVc in doomedVcs) {
+                [self closeWindow:(TiWindowProxy *)[doomedVc proxy] animated:NO];
             }
             RELEASE_TO_NIL(doomedVcs);
         }
         if (removeTab) {
-            [self closeWindowProxy:rootWindow animated:NO];
+            [self closeWindow:[rootController window] animated:NO];
+            RELEASE_TO_NIL(rootController);
             RELEASE_TO_NIL(controller);
             RELEASE_TO_NIL(current);
         }
@@ -84,173 +126,99 @@
     },YES);
 }
 
--(UIViewController *)rootController
-{
-    if (rootWindow == nil) {
-        id window = [self valueForKey:@"window"];
-        ENSURE_TYPE(window, TiWindowProxy);
-        rootWindow = [window retain];
-        [rootWindow setIsManaged:YES];
-        [rootWindow setTab:self];
-        [rootWindow setParentOrientationController:self];
-        [rootWindow open:nil];
-    }
-    return [rootWindow hostingController];
-}
-
--(void)openOnUIThread:(NSArray*)args
-{
-	if (transitionIsAnimating)
-	{
-		[self performSelector:_cmd withObject:args afterDelay:0.1];
-		return;
-	}
-	TiWindowProxy *window = [args objectAtIndex:0];
-	BOOL animated = ([args count] > 1) ? [TiUtils boolValue:@"animated" properties:[args objectAtIndex:1] def:YES] : YES;
-    [controllerStack addObject:[window hostingController]];
-    [[[self rootController] navigationController] pushViewController:[window hostingController] animated:animated];
-}
-
--(void)closeOnUIThread:(NSArray*)args
-{
-	if (transitionIsAnimating)
-	{
-		[self performSelector:_cmd withObject:args afterDelay:0.1];
-		return;
-	}
-	TiWindowProxy *window = [args objectAtIndex:0];
-    
-    if (window == current) {
-        BOOL animated = ([args count] > 1) ? [TiUtils boolValue:@"animated" properties:[args objectAtIndex:1] def:YES] : YES;
-        [[[self rootController] navigationController] popViewControllerAnimated:animated];
-    }
-    else {
-        [self closeWindowProxy:window animated:NO];
-    }
-    
-}
-
-#pragma mark - Internal API
--(void)setTabGroup:(TiUITabGroupProxy*)proxy
-{
-    tabGroup = proxy;
-    if (controller != nil) {
-        [TiUtils configureController:controller withObject:tabGroup];
-    }
-}
-
 -(void)removeFromTabGroup
 {
     [self setActive:NUMBOOL(NO)];
     [self cleanNavStack:YES];
 }
 
-- (void)closeWindowProxy:(TiWindowProxy*)window animated:(BOOL)animated
-{
-    [window retain];
-    UIViewController *windowController = [[window hostingController] retain];
-    
-	// Manage the navigation controller stack
-	UINavigationController* navController = [[self rootController] navigationController];
-	NSMutableArray* newControllerStack = [NSMutableArray arrayWithArray:[navController viewControllers]];
-	[newControllerStack removeObject:windowController];
-	[navController setViewControllers:newControllerStack animated:animated];
-	[window setTab:nil];
-	[window setParentOrientationController:nil];
-	[controllerStack removeObject:windowController];
-	// for this to work right, we need to sure that we always have the tab close the window
-	// and not let the window simply close by itself. this will ensure that we tell the
-	// tab that we're doing that
-	[window close:nil];
-    RELEASE_TO_NIL_AUTORELEASE(window);
-    RELEASE_TO_NIL(windowController);
-}
 
-#pragma mark - TiTab protocol
--(UINavigationController*)controller
+- (void)handleWillShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-	if (controller==nil)
-	{
-		controller = [[UINavigationController alloc] initWithRootViewController:[self rootController]];
-		controller.delegate = self;
-		[TiUtils configureController:controller withObject:tabGroup];
-		[self setTitle:[self valueForKey:@"title"]];
-		[self setIcon:[self valueForKey:@"icon"]];
-		[self setBadge:[self valueForKey:@"badge"]];
-		controllerStack = [[NSMutableArray alloc] init];
-		[controllerStack addObject:[self rootController]];
+	BOOL safeToTransition = YES;
+	if (current!=nil)
+	{ 
+		TiWindowProxy *currentWindow = [current window];
+		
+		[currentWindow _tabBeforeBlur];
+		[[currentWindow retain] autorelease];
+		
+		// close the window if it's not our root window
+		// check to make sure that we're not actually push a window on the stack
+		if (opening==NO && [rootController window]!=currentWindow && [TiUtils boolValue:currentWindow.opened] && currentWindow.closing==NO && [controllerStack containsObject:viewController])
+		{
+			RELEASE_TO_NIL(closingWindows);
+            closingWindows = [[NSMutableArray alloc] init];
+            // Travel down the stack until the new viewController is reached; these are the windows
+            // which must be closed.
+            NSEnumerator* enumerator = [controllerStack reverseObjectEnumerator];
+            for (UIViewController* windowController in enumerator) {
+                if (windowController != viewController && [windowController isKindOfClass:[TiUITabController class]]) {
+                    TiWindowProxy* window = [(TiUITabController*)windowController window];
+                    if (window == nil)
+                    {
+                        continue;
+                    }
+                    [closingWindows addObject:window];
+                    safeToTransition = safeToTransition && ![window restoreFullScreen];
+
+                    [window windowWillClose];
+                }
+                else {
+                    break;
+                }
+            }
+		}
+		
+		[currentWindow _tabBlur];
+		RELEASE_TO_NIL(current);
 	}
-	return controller;
+	
+	current = (TiUITabController*)[viewController retain];
+	
+	TiWindowProxy *newWindow = [current window];
+	
+	[newWindow _tabBeforeFocus];
+	
+	if (opening || [TiUtils boolValue:newWindow.opened]==NO)
+	{
+		[newWindow open:nil];
+	}
+	
+	[newWindow _tabFocus];
+	WARN_IF_BACKGROUND_THREAD_OBJ;
+	if (safeToTransition) {
+		[self childOrientationControllerChangedFlags:newWindow];
+	}
+
+	opening = NO; 
 }
 
--(TiProxy<TiTabGroup>*)tabGroup
+- (void)handleDidShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    return tabGroup;
-}
-
--(void)openWindow:(NSArray*)args
-{
-	TiWindowProxy *window = [args objectAtIndex:0];
-	ENSURE_TYPE(window,TiWindowProxy);
-    
-    if (window == rootWindow) {
-        [rootWindow windowWillOpen];
-        [rootWindow windowDidOpen];
-    }
-    [window setIsManaged:YES];
-	[window setTab:self];
-	[window setParentOrientationController:self];
-    //Send to open. Will come back after _handleOpen returns true.
-    if (![window opening]) {
-        args = ([args count] > 1) ? [args objectAtIndex:1] : nil;
-        if (args != nil) {
-            args = [NSArray arrayWithObject:args];
+	if (closingWindows!=nil)
+	{
+        for (TiWindowProxy* closingWindow in closingWindows) {
+            NSArray* args = [NSArray arrayWithObjects:closingWindow,[NSDictionary dictionaryWithObject:NUMBOOL(animated) forKey:@"animated"], nil];
+            [self close:args];
         }
-        [window open:args];
-        return;
-    }
-    
-	[[[TiApp app] controller] dismissKeyboard];
-	TiThreadPerformOnMainThread(^{
-		[self openOnUIThread:args];
-	}, YES);
+	}
+    RELEASE_TO_NIL(closingWindows);
+    RELEASE_TO_NIL(controllerStack);
+    controllerStack = [[[rootController navigationController] viewControllers] copy];
+    [self childOrientationControllerChangedFlags:[current window]];
 }
 
--(void)closeWindow:(NSArray*)args
-{
-	TiWindowProxy *window = [args objectAtIndex:0];
-	ENSURE_TYPE(window,TiWindowProxy);
-    if (window == rootWindow) {
-        DebugLog(@"[ERROR] Can not close root window of the tab. Use removeTab instead");
-        return;
-    }
-    TiThreadPerformOnMainThread(^{
-        [self closeOnUIThread:args];
-    }, YES);
-}
-
-
--(void)open:(NSArray*)args
-{
-    [self openWindow:args];
-}
-
--(void)close:(NSArray *)args
-{
-    [self closeWindow:args];
-}
-
--(void)windowClosing:(TiWindowProxy*)window animated:(BOOL)animated
-{
-    //NO OP NOW
-}
-
-#pragma mark - UINavigationControllerDelegate
+#pragma mark Delegates
 
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
 	transitionIsAnimating = YES;
+	if (current==viewController)
+	{
+		return;
+	}
 	[self handleWillShowViewController:viewController animated:animated];
 }
 
@@ -265,124 +233,148 @@
 	[self handleDidShowViewController:viewController animated:animated];
 }
 
-
-#pragma mark Public APIs
-
-- (void)handleWillShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    if (current != nil) {
-        UIViewController *curController = [current hostingController];
-        NSArray* curStack = [[[self rootController] navigationController] viewControllers];
-        BOOL winclosing = NO;
-        if (![curStack containsObject:curController]) {
-            winclosing = YES;
-        } else {
-            NSUInteger curIndex = [curStack indexOfObject:curController];
-            if (curIndex > 1) {
-                UIViewController* currentPopsTo = [curStack objectAtIndex:(curIndex - 1)];
-                if (currentPopsTo == viewController) {
-                    winclosing = YES;
-                }
-            }
-        }
-        if (winclosing) {
-            //TIMOB-15033. Have to call windowWillClose so any keyboardFocussedProxies resign
-            //as first responders. This is ok since tab is not nil so no message will be sent to
-            //hosting controller.
-            [current windowWillClose];
-        }
-    }
-    TiWindowProxy* theWindow = (TiWindowProxy*)[(TiViewController*)viewController proxy];
-    if (theWindow == rootWindow) {
-        //This is probably too late for the root view controller.
-        //Figure out how to call open before this callback
-        [theWindow open:nil];
-    } else if ([theWindow opening]) {
-        [theWindow windowWillOpen];
-        [theWindow windowDidOpen];
-    }
-}
-
-- (void)handleDidShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    if (current != nil) {
-        UIViewController* oldController = [current hostingController];
-        UINavigationController* navController = [[self rootController] navigationController];
-        if (![[navController viewControllers] containsObject:oldController]) {
-            [controllerStack removeObject:oldController];
-            [current setTab:nil];
-            [current setParentOrientationController:nil];
-            [current close:nil];
-            //TIMOB-15188. Tab can switch to rootView anytime by tapping the selected tab again.
-            if ((viewController == [self rootController]) && ([controllerStack count] > 1) ) {
-                [controllerStack removeObject:[self rootController]];
-                for (TiViewController* theController in [controllerStack reverseObjectEnumerator]) {
-                    TiWindowProxy* theWindow = (TiWindowProxy*)[theController proxy];
-                    [theWindow setTab:nil];
-                    [theWindow setParentOrientationController:nil];
-                    [theWindow close:nil];
-                }
-                [controllerStack removeAllObjects];
-                [controllerStack addObject:[self rootController]];
-            }
-        }
-    }
-    RELEASE_TO_NIL(current);
-    TiWindowProxy* theWindow = (TiWindowProxy*)[(TiViewController*)viewController proxy];
-    current = [theWindow retain];
-    [self childOrientationControllerChangedFlags:current];
-    if (hasFocus) {
-        [current gainFocus];
-    }
-}
-
 - (void)handleWillBlur
 {
+	TiWindowProxy *currentWindow = [current window];
+	[currentWindow _tabBeforeBlur];
 }
 
 - (void)handleDidBlur:(NSDictionary *)event
 {
-    if (!hasFocus) {
-        return;
-    }
-
-    hasFocus = NO;
-    if (current != nil) {
-        UIViewController* topVC = [[[self rootController] navigationController] topViewController];
-        if ([topVC isKindOfClass:[TiViewController class]]) {
-            TiViewProxy* theProxy = [(TiViewController*)topVC proxy];
-            if ([theProxy conformsToProtocol:@protocol(TiWindowProtocol)]) {
-                [(id<TiWindowProtocol>)theProxy resignFocus];
-            }
-        }
-    }
-    if ([self _hasListeners:@"blur"]) {
-        [self fireEvent:@"blur" withObject:nil withSource:self propagate:NO reportSuccess:NO errorCode:0 message:nil];
-    }
+	if ([self _hasListeners:@"blur"])
+	{
+		[self fireEvent:@"blur" withObject:event propagate:NO];
+	}
+	TiWindowProxy *currentWindow = [current window];
+	[currentWindow _tabBlur];
 }
 
 - (void)handleWillFocus
 {
+	TiWindowProxy *currentWindow = [current window];
+	[currentWindow _tabBeforeFocus];
 }
 
 - (void)handleDidFocus:(NSDictionary *)event
 {
-    if (hasFocus) {
+	if ([self _hasListeners:@"focus"])
+	{
+		[self fireEvent:@"focus" withObject:event propagate:NO];
+	}
+	TiWindowProxy *currentWindow = [current window];
+	[currentWindow _tabFocus];
+}
+
+
+#pragma mark Public APIs
+
+-(TiProxy*)tabGroup
+{
+	return tabGroup;
+}
+
+-(void)open:(NSArray*)args
+{
+	TiWindowProxy *window = [args objectAtIndex:0];
+	ENSURE_TYPE(window,TiWindowProxy);
+	// since the didShow notification above happens on both a push and pop, i need to keep a flag
+	// to let me know which state i'm in so i only close the current window on a pop
+	opening = YES;
+	// Because the window may be going out of scope soon, and that rememberself is a bit, not a counter, we can safely protect here.
+	[window rememberSelf];
+	[window setParentOrientationController:self];
+	// TODO: Slap patch.  Views, when opening/added, should check parent visibility (and parent/parent visibility, if possible)
+	[window parentWillShow];
+	[[[TiApp app] controller] dismissKeyboard];
+	TiThreadPerformOnMainThread(^{
+		[self openOnUIThread:args];
+	}, YES);
+}
+
+-(void)openOnUIThread:(NSArray*)args
+{
+	if (transitionIsAnimating)
+	{
+		[self performSelector:_cmd withObject:args afterDelay:0.1];
+		return;
+	}
+	TiWindowProxy *window = [args objectAtIndex:0];
+	BOOL animated = args!=nil && [args count] > 1 ? [TiUtils boolValue:@"animated" properties:[args objectAtIndex:1] def:YES] : YES;
+	TiUITabController *root = [[TiUITabController alloc] initWithProxy:window tab:self];
+
+	[self controller];
+	[[rootController navigationController] pushViewController:root animated:animated];
+	[root release];
+}
+
+-(void)close:(id)args
+{
+	ENSURE_UI_THREAD(close,args);
+
+	// Don't use ENSURE_SINGLE_ARG because it will overwrite the original 'args' value if we
+	// ARE passing more than one arg
+	TiWindowProxy* window = nil;
+	if ([args isKindOfClass:[NSArray class]]) {
+		window = [args objectAtIndex:0];
+	}
+	else {
+		window = args;
+	}
+	if (![window isKindOfClass:[TiWindowProxy class]]) {
+		[self throwException:TiExceptionInvalidType 
+				   subreason:[NSString stringWithFormat:@"expected: %@, was: %@",[TiWindowProxy class],[window class]] 
+					location:CODELOCATION];
+	}
+	
+	NSDictionary* properties = (([args isKindOfClass:[NSArray class]]) &&
+								([args count] > 1) && 
+								([[args objectAtIndex:1] isKindOfClass:[NSDictionary class]])) ? [args objectAtIndex:1] : nil;
+
+	BOOL animated = [TiUtils boolValue:@"animated" properties:properties def:NO];
+    
+    if (window == [rootController window]) {
+        NSLog(@"[WARN] Can not close root window of a tab. Use TabGroup.removeTab instead");
         return;
     }
-    hasFocus = YES;
-    if (current != nil) {
-        UIViewController* topVC = [[[self rootController] navigationController] topViewController];
-        if ([topVC isKindOfClass:[TiViewController class]]) {
-            TiViewProxy* theProxy = [(TiViewController*)topVC proxy];
-            if ([theProxy conformsToProtocol:@protocol(TiWindowProtocol)]) {
-                [(id<TiWindowProtocol>)theProxy gainFocus];
-            }
-        }
+    if (window == [current window]) {
+        [[rootController navigationController] popViewControllerAnimated:animated];
+        return;
     }
-    if ([self _hasListeners:@"focus"]) {
-        [self fireEvent:@"focus" withObject:nil withSource:self propagate:NO reportSuccess:NO errorCode:0 message:nil];
+    [self closeWindow:window animated:animated];
+}
+
+- (void)closeWindow:(TiWindowProxy *)window animated:(BOOL)animated
+{
+    [window retain];
+    UIViewController *windowController = [[window controller] retain];
+    if ([windowController isKindOfClass:[TiUITabController class]]) {
+        [(TiWindowProxy *)[(TiUITabController*)windowController proxy] _associateTab:nil navBar:nil tab:nil];
     }
+
+	// Manage the navigation controller stack
+	UINavigationController* navController = [rootController navigationController];
+	NSMutableArray* newControllerStack = [NSMutableArray arrayWithArray:[navController viewControllers]];
+	[newControllerStack removeObject:windowController];
+	[navController setViewControllers:newControllerStack animated:animated];
+    RELEASE_TO_NIL(controllerStack);
+    controllerStack = [newControllerStack retain];
+	[window _tabBlur];
+	[window setParentOrientationController:nil];
+	
+	// for this to work right, we need to sure that we always have the tab close the window
+	// and not let the window simply close by itself. this will ensure that we tell the 
+	// tab that we're doing that
+	[window close:[NSArray arrayWithObjects:[NSDictionary dictionaryWithObject:NUMBOOL(YES) forKey:@"closeByTab"],nil]];
+    RELEASE_TO_NIL_AUTORELEASE(window);
+    RELEASE_TO_NIL(windowController);
+}
+
+-(void)windowClosing:(TiWindowProxy*)window animated:(BOOL)animated
+{
+	if (current!=nil && [current window]==window)
+	{
+		[[rootController navigationController] popViewControllerAnimated:animated];
+	}
 }
 
 -(void)setActive:(id)active
@@ -409,13 +401,12 @@
 
 -(void)updateTabBarItem
 {
-	if (rootWindow == nil)
+	if (rootController == nil)
 	{
 		return;
 	}
 	ENSURE_UI_THREAD_0_ARGS;
 	
-    UIViewController* rootController = [rootWindow hostingController];
 	id badgeValue = [TiUtils stringValue:[self valueForKey:@"badge"]];
 	id icon = [self valueForKey:@"icon"];
 	
@@ -462,32 +453,7 @@
 
 	[rootController setTitle:title];
 	UITabBarItem *ourItem = nil;
-    
-    BOOL imageIsMask = NO;
-    
-    if ([TiUtils isIOS7OrGreater]) {
-        
-        //CLEAN UP CODE WHEN WE UPGRADE MIN XCODE VERSION TO XCODE5
-        if (image != nil) {
-            if ([image respondsToSelector:@selector(imageWithRenderingMode:)]) {
-                NSInteger theMode = iconOriginal ? 1/*UIImageRenderingModeAlwaysOriginal*/ : 2/*UIImageRenderingModeAlwaysTemplate*/;
-                image = [(id<UIImageIOS7Support>)image imageWithRenderingMode:theMode];
-            }
-        }
-        if (activeImage != nil) {
-            if ([activeImage respondsToSelector:@selector(imageWithRenderingMode:)]) {
-                NSInteger theMode = activeIconOriginal ? 1/*UIImageRenderingModeAlwaysOriginal*/ : 2/*UIImageRenderingModeAlwaysTemplate*/;
-                activeImage = [(id<UIImageIOS7Support>)activeImage imageWithRenderingMode:theMode];
-            }
-        }
-        
-        systemTab = NO;
-        ourItem = [[[UITabBarItem alloc] initWithTitle:title image:image selectedImage:activeImage] autorelease];
-        [ourItem setBadgeValue:badgeValue];
-        [rootController setTabBarItem:ourItem];
-        return;
-    }
-    
+
 	if (!systemTab)
 	{
 		ourItem = [rootController tabBarItem];
@@ -540,32 +506,6 @@
 	[self replaceValue:icon forKey:@"icon" notification:NO];
 
 	[self updateTabBarItem];
-}
-
--(void)setIconIsMask:(id)value
-{
-    if (![TiUtils isIOS7OrGreater]) {
-        return;
-    }
-    [self replaceValue:value forKey:@"iconIsMask" notification:NO];
-    BOOL newValue = ![TiUtils boolValue:value def:YES];
-    if (newValue != iconOriginal) {
-        iconOriginal = newValue;
-        [self updateTabBarItem];
-    }
-}
-
--(void)setActiveIconIsMask:(id)value
-{
-    if (![TiUtils isIOS7OrGreater]) {
-        return;
-    }
-    [self replaceValue:value forKey:@"activeIconIsMask" notification:NO];
-    BOOL newValue = ![TiUtils boolValue:value def:YES];
-    if (newValue != activeIconOriginal) {
-        activeIconOriginal = newValue;
-        [self updateTabBarItem];
-    }
 }
 
 -(void)setActiveIcon:(id)icon
@@ -624,43 +564,8 @@
 	}
 }
 
-#pragma mark - TiOrientationController
 
 @synthesize parentOrientationController;
-
--(BOOL) hidesStatusBar
-{
-    if (rootWindow == nil) {
-        return NO;
-    }
-    
-    UINavigationController* nc = [[rootWindow hostingController] navigationController];
-    UIViewController* topVc = [nc topViewController];
-    if ([topVc isKindOfClass:[TiViewController class]]) {
-        TiViewProxy* theProxy = [(TiViewController*)topVc proxy];
-        if ([theProxy conformsToProtocol:@protocol(TiWindowProtocol)]) {
-            return [(id<TiWindowProtocol>)theProxy hidesStatusBar];
-        }
-    }
-    return NO;
-}
-
--(UIStatusBarStyle)preferredStatusBarStyle;
-{
-    if (rootWindow == nil) {
-        return UIStatusBarStyleDefault;
-    }
-    
-    UINavigationController* nc = [[rootWindow hostingController] navigationController];
-    UIViewController* topVc = [nc topViewController];
-    if ([topVc isKindOfClass:[TiViewController class]]) {
-        TiViewProxy* theProxy = [(TiViewController*)topVc proxy];
-        if ([theProxy conformsToProtocol:@protocol(TiWindowProtocol)]) {
-            return [(id<TiWindowProtocol>)theProxy preferredStatusBarStyle];
-        }
-    }
-    return UIStatusBarStyleDefault;
-}
 
 -(TiOrientationFlags)orientationFlags
 {
@@ -670,8 +575,7 @@
 		return [(id<TiOrientationController>)modalController orientationFlags];
 	}
 	
-	UINavigationController* nc = [[rootWindow hostingController] navigationController];
-	for (id thisController in [[nc viewControllers] reverseObjectEnumerator])
+	for (id thisController in [[controller viewControllers] reverseObjectEnumerator])
 	{
 		if (![thisController isKindOfClass:[TiViewController class]])
 		{

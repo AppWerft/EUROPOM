@@ -11,7 +11,7 @@
 #import "TiViewProxy.h"
 #import "TiWindowProxy.h"
 
-@interface TiUIiPhoneNavigationGroupProxy : TiViewProxy<TiOrientationController,TiTab> {
+@interface TiUIiPhoneNavigationGroupProxy : TiViewProxy<TiOrientationController> {
 @private
     // Do we still need this? It was picked up by clang as an error; @synthesize w/o @property.
     id<TiOrientationController> parentOrientationController;

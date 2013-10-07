@@ -22,7 +22,6 @@
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/PlausibleDatabase.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/PLSqliteDatabase.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/PLSqlitePreparedStatement.o
-/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiViewController.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/PLSqliteResultSet.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/SBJSON.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/KrollBridge.o
@@ -37,7 +36,9 @@
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/XHRBridge.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/WebFont.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/UIModule.o
+/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiWindowProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiViewProxy.o
+/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiViewController.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUtils.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUIWindowProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUIWindow.o
@@ -53,6 +54,7 @@
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUITableView.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUITabGroupProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUITabGroup.o
+/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUITabController.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUIiPhoneSystemIconProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUIiPhoneSystemButtonStyleProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUIiPhoneSystemButtonProxy.o
@@ -106,8 +108,6 @@
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiContactsPerson.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiComplexValue.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiColor.o
-/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUIiOSNavWindowProxy.o
-/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiRootViewController.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiButtonUtil.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiBlob.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiBase.o
@@ -168,7 +168,6 @@
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUIMaskedImage.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiNetworkBonjourBrowserProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiNetworkBonjourServiceProxy.o
-/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiUIiOSNavWindow.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiNetworkTCPSocketProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiDOMTextNodeProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiMediaVideoPlayer.o
@@ -191,6 +190,7 @@
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TopTiModule.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiApp.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiErrorController.o
+/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiRootViewController.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiMediaMusicPlayer.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiMediaItem.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiLayoutQueue.o
@@ -218,7 +218,6 @@
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/AudioStreamerCUR.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiAppiOSProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiAppiOSBackgroundServiceProxy.o
-/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiWindowProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiAppiOSLocalNotificationProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiNetworkSocketTCPProxy.o
 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/iphone/build/EuroPom.build/Debug-iphonesimulator/EuroPom.build/Objects-normal/i386/TiBuffer.o

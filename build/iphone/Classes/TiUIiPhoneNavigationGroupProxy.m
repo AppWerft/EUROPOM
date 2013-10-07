@@ -18,86 +18,53 @@
 
 -(id)init
 {
-    if (self = [super init]) {
-        //This is done to insert the top line of the nav bar
-        //underneath the bottom line of the status bar.
-        if (![TiUtils isIOS7OrGreater]) {
-            layoutProperties.top = TiDimensionDip(-1);
-        }
-    }
-    return self;
+	if (self = [super init])
+	{
+		//This is done to insert the top line of the nav bar
+		//underneath the bottom line of the status bar.
+		layoutProperties.top = TiDimensionDip(-1);
+	}
+	return self;
 }
-
-#pragma mark - Public API
 
 -(void)open:(NSArray*)args
 {
-    [self openWindow:args];
+	TiWindowProxy *window = [args objectAtIndex:0];
+	ENSURE_TYPE(window,TiWindowProxy);
+	[self rememberProxy:window];
+
+	ENSURE_UI_THREAD(open, args);
+	[[[TiApp app] controller] dismissKeyboard];
+	NSDictionary *properties = [args count] > 1 ? [args objectAtIndex:1] : [NSDictionary dictionary];
+	[[self view] performSelector:@selector(open:withObject:) withObject:window withObject:properties];
 }
 
 -(void)close:(NSArray*)args
 {
-    [self closeWindow:args];
-}
-
-#pragma mark - TiTab Protocol
-
--(UINavigationController*)controller
-{
-	return [(TiUIiPhoneNavigationGroup*)[self view] controller];
-}
-
--(TiProxy<TiTabGroup>*)tabGroup
-{
-    return nil;
-}
-
--(void)openWindow:(NSArray*)args
-{
-	TiWindowProxy *window = [args objectAtIndex:0];
-	ENSURE_TYPE(window,TiWindowProxy);
-    [window setIsManaged:YES];
-	[window setTab:(TiViewProxy<TiTab> *)self];
-	[window setParentOrientationController:self];
-    //Send to open. Will come back after _handleOpen returns true.
-    if (![window opening]) {
-        args = ([args count] > 1) ? [args objectAtIndex:1] : nil;
-        if (args != nil) {
-            args = [NSArray arrayWithObject:args];
-        }
-        [window open:args];
-        return;
-    }
-	NSDictionary *properties = [args count] > 1 ? [args objectAtIndex:1] : [NSDictionary dictionary];
-    TiThreadPerformOnMainThread(^{
-        [[self view] performSelector:@selector(pushOnUIThread:) withObject:args];
-    }, YES);
-}
-
--(void)closeWindow:(NSArray*)args
-{
 	if ([args count]>0)
 	{
-        TiWindowProxy *window = [args objectAtIndex:0];
-        ENSURE_TYPE(window,TiWindowProxy);
-		NSDictionary *properties = [args count] > 1 ? [args objectAtIndex:1] : [NSDictionary dictionary];
-        TiThreadPerformOnMainThread(^{
-            [[self view] performSelector:@selector(popOnUIThread:) withObject:args];
-        }, YES);
-	}
-	else
-	{
+		// we're closing a nav group window
+		
+		TiWindowProxy *window = [args objectAtIndex:0];
+		ENSURE_TYPE(window,TiWindowProxy);
 		ENSURE_UI_THREAD(close,args);
+
+		NSDictionary *properties = [args count] > 1 ? [args objectAtIndex:1] : [NSDictionary dictionary];
+		[[self view] performSelector:@selector(close:withObject:) withObject:window withObject:properties];
+		[self forgetProxy:window];
+	}
+	else 
+	{
+		ENSURE_UI_THREAD(close,args);	   
 		// we're closing the nav group itself
 		[[self view] performSelector:@selector(close)];
 		[self detachView];
 	}
-    
 }
 
--(void)windowClosing:(TiWindowProxy*)window animated:(BOOL)animated
+-(UINavigationController*)controller
 {
-    //NO OP
+	return [(TiUIiPhoneNavigationGroup*)[self view] controller];
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration

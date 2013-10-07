@@ -10,7 +10,9 @@ exports.create = function() {
 		});
 	};
 	var self = Ti.UI.createWindow({
-		fullscreen : true
+		barColor : '#050',
+		title : 'Alte Apfelsorten',
+		exitOnClose : true
 	});
 	var pommesTemplate = require('ui/TEMPLATES').pommerow;
 	self.listView = Ti.UI.createListView({

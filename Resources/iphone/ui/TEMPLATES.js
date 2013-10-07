@@ -94,7 +94,7 @@ exports.eventrow = {
 		properties : {
 			width : Ti.UI.FILL,
 			left : "110dp",
-			right : '20dp',
+			right : 0,
 			layout : 'vertical',
 		},
 		events : {
@@ -107,11 +107,11 @@ exports.eventrow = {
 			properties : {
 				left : 0,
 				font : {
-					fontSize : '16dp'
+					fontSize : '14dp'
 				},
 				top : '5dp',
 				color : '#444',
-				height : Ti.UI.SIZE,
+				height : '20dp',
 			},
 			events : {
 				'click' : function() {
@@ -122,14 +122,14 @@ exports.eventrow = {
 			bindId : 'title',
 			properties : {
 				left : 0,
-				top : '5dp',
+				top : 0,
 				color : '#060',
 				font : {
-					fontSize : '22dp',
+					fontSize : '18dp',
 					fontWeight : 'bold',
 					fontFamily : 'Vollkorn-Regular'
 				},
-				height : '60dp',
+				height : '72dp',
 			},
 			events : {
 				'click' : function() {
@@ -190,7 +190,7 @@ exports.eventrow = {
 
 exports.feedrow = {
 	properties : {
-		height : Ti.UI.SIZE,
+		height : 136,
 		backgroundColor : 'white',
 	},
 	events : {
@@ -201,8 +201,7 @@ exports.feedrow = {
 		type : 'Ti.UI.View',
 		properties : {
 			width : Ti.UI.FILL,
-			left : "95dp",
-			right : '10dp',
+			left : "75dp",
 			layout : 'vertical',
 		},
 		events : {
@@ -221,7 +220,7 @@ exports.feedrow = {
 					fontWeight : 'bold',
 					fontFamily : 'Vollkorn-Regular'
 				},
-				height : Ti.UI.SIZE,
+				height : '46dp',
 			},
 			events : {
 				'click' : function() {
@@ -229,16 +228,16 @@ exports.feedrow = {
 			}
 		}, {
 			type : 'Ti.UI.Label',
-			bindId : 'description',
+			bindId : 'text',
 			properties : {
 				left : 0,
-				top : '5dp',
+				top : 0,
 				bottom : '10dp',
 				color : 'black',
 				textAlign : 'left',
-				height : Ti.UI.SIZE,
+				height : '50dp',
 				font : {
-					fontSize : '14dp',
+					fontSize : '13dp',
 				},
 			},
 			events : {
@@ -253,8 +252,8 @@ exports.feedrow = {
 			left : 0,
 			image : '/assets/pmlv.png',
 			top : '10dp',
-			width : '90dp',
-			height : '90dp',
+			width : '60dp',
+			height : '60dp',
 			height : Ti.UI.SIZE
 		},
 		events : {

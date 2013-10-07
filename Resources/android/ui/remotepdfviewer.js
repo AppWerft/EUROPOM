@@ -2,6 +2,7 @@ exports.createPDFViewer = function(_pdfurl, _progresswidget) {
 	var getFromCache = function(_pdf, _onload) {
 		var pdffile = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, Ti.Utils.md5HexDigest(_pdfurl) + '.slides');
 		if (pdffile.exists()) {
+			console.log('Info:  pdf was alreadystored => displaying');
 			_progresswidget.hide();
 			_onload(pdffile);
 		} else {
@@ -22,9 +23,12 @@ exports.createPDFViewer = function(_pdfurl, _progresswidget) {
 			xhr.open('GET', _pdf);
 			console.log('Info: getting pdf=' + _pdf);
 			xhr.send(null);
+			console.log('Info: start pdf downloading');
 		}
 	};
+	console.log('Info: start pdf displaying');
 	getFromCache(_pdfurl, function(_appFile) {
+		console.log('Info: pdf is caching and ready for display');
 		if (Ti.Filesystem.isExternalStoragePresent()) {
 			var filenameBase = new Date().getTime();
 			tmpFile = Ti.Filesystem.getFile(Ti.Filesystem.tempDirectory, filenameBase + '.europom.pdf');

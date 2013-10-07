@@ -31,8 +31,8 @@
  */
 -(UINavigationController*)controller;
 
--(void)openWindow:(NSArray*)args;
--(void)closeWindow:(NSArray*)args;
+-(void)open:(NSArray*)args;
+-(void)close:(NSArray*)args;
 
 /**
  Tells the tab that its associated window is closing.

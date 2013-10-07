@@ -15,13 +15,13 @@
 
 //TODO: we probably should split this ViewProxy into a a separate TiUIView like normal
 
-@interface TiUIWindowProxy : TiWindowProxy
+@interface TiUIWindowProxy : TiWindowProxy 
 {
 @private
 	KrollBridge *context;
 	BOOL hasToolbar;
 	BOOL contextReady;
-	BOOL shouldUpdateNavBar;
+	BOOL animating;
 	UIImageView *barImageView;
 	NSURL *oldBaseURL;
 	id latch;

@@ -1,8 +1,10 @@
+Array.prototype.isArray = true;
+
 exports.create = function() {
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
 		backgroundImage : '/assets/bg.png',
-		barColor : '#060'
+		barColor : '#060',title:'Apfelfachvorträge'
 	});
 	self.listView = Ti.UI.createListView({
 		bottom : '20dp',
@@ -31,34 +33,41 @@ exports.create = function() {
 
 	setTimeout(function() {
 		self.add(self.listView);
-		Ti.App.PommesModel.getAllEvents({
-			onload : function(events) {
+		require('vendor/cachedxhr').get({
+			url : 'http://lab.min.uni-hamburg.de/store/europom/events.json',
+			defaultjson : 'model/events.json',
+			onload : function(_events) {
 				var sections = [];
-				for (var t = 0; t < events.length; t++) {
+				console.log(_events.length);
+				for (var t = 0; t < _events.length; t++) {
 					var data = [];
-					var sessions = events[t].sessions;
-					for (var a = 0; a < sessions.length; a++) {
-						data.push({
-							pic : {
-								image : sessions[a].image
-							},
-							title : {
-								text : sessions[a].title
-							},
-							referent : {
-								text : sessions[a].referent
-							},
-							date : {
-								text : sessions[a].date + ' Uhr'
-							},
-							properties : {
-								itemId : JSON.stringify(sessions[a]),
-								accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
-							}
-						});
-					};
+					var themetitle = _events[t].theme;
+					
+					var sessions = _events[t].sessions;
+					if (sessions && sessions.isArray)
+						for (var a = 0; a < sessions.length; a++) {
+							data.push({
+								pic : {
+									image : sessions[a].image || '/assets/dummy.jpg'
+								},
+								title : {
+									text : sessions[a].title
+								},
+								referent : {
+									text : sessions[a].referent
+								},
+								date : {
+									text : sessions[a].date + ' Uhr'
+								},
+								properties : {
+									itemId : JSON.stringify(sessions[a]),
+									accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+								}
+							});
+						}
+					;
 					sections[t] = Ti.UI.createListSection({
-						headerTitle : events[t].theme,
+						headerTitle : themetitle,
 						items : data
 					});
 					self.listView.setSections(sections);

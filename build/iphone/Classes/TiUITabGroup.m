@@ -12,6 +12,8 @@
 #import "TiUITabProxy.h"
 #import "TiUtils.h"
 #import "TiColor.h"
+#import "TiUITabController.h"
+#import "TiWindowProxy.h"
 #import "TiUITabGroupProxy.h"
 
 @implementation TiUITabGroup
@@ -21,20 +23,18 @@ DEFINE_EXCEPTIONS
 -(void)dealloc
 {
 	RELEASE_TO_NIL(controller);
-	RELEASE_TO_NIL(focusedTabProxy);
+	RELEASE_TO_NIL(focused);
 	[super dealloc];
 }
 
 -(UITabBarController*)tabController
 {
-    if (controller==nil) {
-        controller = [[UITabBarController alloc] init];
-        controller.delegate = self;
-        controller.moreNavigationController.delegate = self;
-        [TiUtils configureController:controller withObject:self.proxy];
-        [TiUtils configureController:controller.moreNavigationController withObject:self.proxy];
-    }
-    return controller;
+	if (controller==nil)
+	{
+		controller = [[UITabBarController alloc] init];
+		controller.delegate = self;
+	}
+	return controller;
 }
 
 - (id)accessibilityElement
@@ -64,20 +64,20 @@ DEFINE_EXCEPTIONS
 	return -1;
 }
 
--(void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds
+-(void)layoutSubviews
 {
-    if ([controller isViewLoaded]) {
-        [[controller view] setFrame:bounds];
-    }
-    [super frameSizeChanged:frame bounds:bounds];
+	[super layoutSubviews];
+	UIView *view = [self tabController].view;
+	[view setTransform:CGAffineTransformIdentity];
+	[view setFrame:[self bounds]];
 }
 
 #pragma mark Dispatching focus change
 
 - (void)handleWillShowTab:(TiUITabProxy *)newFocus
 {
-    if (focusedTabProxy != newFocus) {
-        [focusedTabProxy handleWillBlur];
+    if (focused != newFocus) {
+        [focused handleWillBlur];
         [newFocus handleWillFocus];
     }
 }
@@ -85,10 +85,10 @@ DEFINE_EXCEPTIONS
 - (void)handleDidShowTab:(TiUITabProxy *)newFocus
 {
     // Do nothing if no tabs are being focused or blurred (or the window is opening)
-    if ((focusedTabProxy == nil && newFocus == nil) || (focusedTabProxy == newFocus)) {
+    if ((focused == nil && newFocus == nil) || (focused == newFocus)) {
         //TIMOB-10796. Ensure activeTab is set to focused on early return
-        if (focusedTabProxy != nil) {
-            [self.proxy replaceValue:focusedTabProxy forKey:@"activeTab" notification:NO];
+        if (focused != nil) {
+            [self.proxy replaceValue:focused forKey:@"activeTab" notification:NO];
         }
         return;
     }
@@ -100,10 +100,10 @@ DEFINE_EXCEPTIONS
 	int previousIndex = -1;
 	int index = -1;
 
-	if (focusedTabProxy != nil)
+	if (focused != nil)
 	{
-		[event setObject:focusedTabProxy forKey:@"previousTab"];
-		previousIndex = [tabArray indexOfObject:[(TiUITabProxy *)focusedTabProxy controller]];
+		[event setObject:focused forKey:@"previousTab"];
+		previousIndex = [tabArray indexOfObject:[(TiUITabProxy *)focused controller]];
 	}
 	
 	if (newFocus != nil)
@@ -116,22 +116,19 @@ DEFINE_EXCEPTIONS
 	[event setObject:NUMINT(index) forKey:@"index"];
 
 	[self.proxy fireEvent:@"blur" withObject:event];
-	[focusedTabProxy handleDidBlur:event];
-    [focusedTabProxy replaceValue:[NSNumber numberWithBool:NO] forKey:@"active" notification:NO];
+	[focused handleDidBlur:event];
+    [focused replaceValue:[NSNumber numberWithBool:NO] forKey:@"active" notification:NO];
 	
-	RELEASE_TO_NIL(focusedTabProxy);
-	focusedTabProxy = [newFocus retain];
-	[self.proxy replaceValue:focusedTabProxy forKey:@"activeTab" notification:NO];
-    [focusedTabProxy replaceValue:[NSNumber numberWithBool:YES] forKey:@"active" notification:NO];
+	RELEASE_TO_NIL(focused);
+	focused = [newFocus retain];
+	[self.proxy replaceValue:focused forKey:@"activeTab" notification:NO];
+    [focused replaceValue:[NSNumber numberWithBool:YES] forKey:@"active" notification:NO];
 
     // If we're in the middle of opening, the focus happens once the tabgroup is opened
     if (![(TiWindowProxy*)[self proxy] opening]) {
         [self.proxy fireEvent:@"focus" withObject:event];
     }
-    //TIMOB-15187. Dont fire focus of tabs if proxy does not have focus
-    if ([(TiUITabGroupProxy*)[self proxy] canFocusTabs]) {
-        [focusedTabProxy handleDidFocus:event];
-    }
+	[focused handleDidFocus:event];
 }
 
 
@@ -175,89 +172,81 @@ DEFINE_EXCEPTIONS
 
 -(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated	
 {
-    NSArray * moreViewControllerStack = [navigationController viewControllers];
-    int stackHeight = [moreViewControllerStack count];
-    if (stackHeight > 1) {
-        UIViewController * rootController = [moreViewControllerStack objectAtIndex:1];
-        if ([rootController respondsToSelector:@selector(proxy)]) {
-            id theProxy = [(id)rootController proxy];
-            if ([theProxy conformsToProtocol:@protocol(TiWindowProtocol)] ) {
-                TiUITabProxy * tabProxy = (TiUITabProxy *)[(id)theProxy tab];
-                [tabProxy handleWillShowViewController:viewController animated:animated];
-            } else {
-                DebugLog(@"[ERROR] The view controller is not hosting a window proxy. Can not find tab.");
-            }
-        } else {
-            DebugLog(@"[ERROR] The view controller does not respond to selector proxy. Can not find window");
-        }
-    } else {
-        [self handleWillShowTab:nil];
-        [self updateMoreBar:navigationController];
-        if (allowConfiguration) {
-            [self setEditButton:navigationController];
-        }
-        // However, under iOS4, we have to manage the appearance/disappearance of the edit button ourselves.
-        else {
-            [self removeEditButton:navigationController];
-        }
-    }
+	NSArray * moreViewControllerStack = [navigationController viewControllers];
+	int stackHeight = [moreViewControllerStack count];
+	if (stackHeight > 1)
+	{
+		UIViewController * rootController = [moreViewControllerStack objectAtIndex:1];
+		if ([rootController respondsToSelector:@selector(tab)])
+		{
+			[(TiUITabProxy *)[(id)rootController tab] handleWillShowViewController:viewController animated:animated];
+		}
+	}
+	else
+	{
+		[self handleWillShowTab:nil];
+		[self updateMoreBar:navigationController];
+		if (allowConfiguration) {
+			[self setEditButton:navigationController];
+		}
+		// However, under iOS4, we have to manage the appearance/disappearance of the edit button ourselves.
+		else {
+			[self removeEditButton:navigationController];
+		}
+	}
 }
 
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    NSArray * moreViewControllerStack = [navigationController viewControllers];
-    int stackHeight = [moreViewControllerStack count];
-    if (stackHeight < 2) { //No more faux roots.
-        if (focusedTabProxy != nil) {
-            [self handleDidShowTab:nil];
-        }
-        return;
-    }
+	NSArray * moreViewControllerStack = [navigationController viewControllers];
+	int stackHeight = [moreViewControllerStack count];
+	if (stackHeight < 2) //No more faux roots.
+	{
+		if (focused != nil)
+		{
+			[self handleDidShowTab:nil];
+		}
+		return;
+	}
 
-    UIViewController * rootController = [moreViewControllerStack objectAtIndex:1];
-    TiUITabProxy * tabProxy = nil;
-    if ([rootController respondsToSelector:@selector(proxy)]) {
-        id theProxy = [(id)rootController proxy];
-        if ([theProxy conformsToProtocol:@protocol(TiWindowProtocol)] ) {
-            tabProxy = (TiUITabProxy *)[(id)theProxy tab];
-        } else {
-            DebugLog(@"[ERROR] The view controller is not hosting a window proxy. Can not find tab.");
-            return;
-        }
-    } else {
-        DebugLog(@"[ERROR] The view controller does not respond to selector proxy. Can not find window");
-        return;
-    }
+	UIViewController * rootController = [moreViewControllerStack objectAtIndex:1];
+	if (![rootController respondsToSelector:@selector(tab)])
+	{
+		return;
+	}
+	
+	TiUITabProxy * tabProxy = (TiUITabProxy *)[(id)rootController tab];
+	if (stackHeight == 2)	//One for the picker, one for the faux root.
+	{
+		if (tabProxy != focused)
+		{
+			[self handleDidShowTab:tabProxy];
+		}
+	}
 
-    if (stackHeight == 2) {	//One for the picker, one for the faux root.
-        if (tabProxy != focusedTabProxy) {
-            [self handleDidShowTab:tabProxy];
-        }
-    }
-
-    [tabProxy handleDidShowViewController:viewController animated:animated];
+	[tabProxy handleDidShowViewController:viewController animated:animated];
 }
 
 #pragma mark TabBarController Delegates
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-    TiUITabProxy * target=nil;
-    if ([tabBarController moreNavigationController] == viewController) {
-        NSArray * moreViewControllerStack = [(UINavigationController *)viewController viewControllers];
-        if ([moreViewControllerStack count]>1) {
-            UIViewController * rootController = [moreViewControllerStack objectAtIndex:1];
-            if ([rootController respondsToSelector:@selector(proxy)]) {
-                id theProxy = [(id)rootController proxy];
-                if ([theProxy conformsToProtocol:@protocol(TiWindowProtocol)] ) {
-                    target = (TiUITabProxy *)[(id)theProxy tab];
-                } else {
-                    DebugLog(@"[ERROR] The view controller is not hosting a window proxy. Can not find tab.");
-                }
-            } else {
-                DebugLog(@"[ERROR] The view controller does not respond to selector proxy. Can not find window");
-            }
+	TiUITabProxy * target=nil;
+	if ([tabBarController moreNavigationController] == viewController)
+	{
+		if (self != [(UINavigationController *)viewController delegate])
+		{
+			[(UINavigationController *)viewController setDelegate:self];
+		}
+		NSArray * moreViewControllerStack = [(UINavigationController *)viewController viewControllers];
+		if ([moreViewControllerStack count]>1)
+		{
+			viewController = [moreViewControllerStack objectAtIndex:1];
+			if ([viewController respondsToSelector:@selector(tab)])
+			{
+				target = (TiUITabProxy *)[(id)viewController tab];
+			}
 		}
 	}
 	else
@@ -317,33 +306,32 @@ DEFINE_EXCEPTIONS
 
 -(void)setTabsBackgroundColor_:(id)value
 {
-    TiColor* color = [TiUtils colorValue:value];
-    UITabBar* tabBar = [controller tabBar];
+	if (![TiUtils isIOS5OrGreater])
+	{
+		NSLog(@"[WARN] tabsBackgroundColor is only supported in iOS 5 or above.");
+		return;
+	}
+	TiColor* color = [TiUtils colorValue:value];
 	//A nil tintColor is fine, too.
-    if([TiUtils isIOS7OrGreater]) {
-        [tabBar performSelector:@selector(setBarTintColor:) withObject:[color color]];
-    } else {
-        tabBar.tintColor = [color color];
-    }
-}
-
--(void)setTabsTintColor_:(id)value
-{
-    if ([TiUtils isIOS7OrGreater]) {
-        TiColor* color = [TiUtils colorValue:value];
-        UITabBar* tabBar = [controller tabBar];
-        tabBar.tintColor = [color color];
-    }
+	controller.tabBar.tintColor = color.color;
 }
 
 -(void)setTabsBackgroundImage_:(id)value
 {
-    controller.tabBar.backgroundImage = [self loadImage:value];
+    if (![TiUtils isIOS5OrGreater]) {
+		NSLog(@"[WARN] tabsBackgroundImage is only supported in iOS 5 or above.");
+		return;
+	}
+	controller.tabBar.backgroundImage = [self loadImage:value];
 }
 
 -(void)setActiveTabBackgroundImage_:(id)value
 {
-    controller.tabBar.selectionIndicatorImage = [self loadImage:value];
+    if (![TiUtils isIOS5OrGreater]) {
+		NSLog(@"[WARN] activeTabBackgroundImage is only supported in iOS 5 or above.");
+		return;
+	}
+	controller.tabBar.selectionIndicatorImage = [self loadImage:value];
 }
 
 -(void)setShadowImage_:(id)value
@@ -358,6 +346,11 @@ DEFINE_EXCEPTIONS
 
 -(void) setActiveTabIconTint_:(id)value
 {
+	if (![TiUtils isIOS5OrGreater])
+	{
+		NSLog(@"[WARN] activeTabIconTint is only supported in iOS 5 or above.");
+		return;
+	}
 	TiColor* color = [TiUtils colorValue:value];
 	//A nil tintColor is fine, too.
 	controller.tabBar.selectedImageTintColor = color.color;
@@ -367,17 +360,7 @@ DEFINE_EXCEPTIONS
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-   [controller willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
-}
-
--(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    [controller willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-}
-
--(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    [controller didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+	[controller willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
 }
 
 
@@ -475,36 +458,36 @@ DEFINE_EXCEPTIONS
         for (TiUITabProxy *tabProxy in tabs) {
             [controllers addObject:[tabProxy controller]];
             if ([TiUtils boolValue:[tabProxy valueForKey:@"active"]]) {
-                RELEASE_TO_NIL(focusedTabProxy);
-                focusedTabProxy = [tabProxy retain];
+                RELEASE_TO_NIL(focused);
+                focused = [tabProxy retain];
             }
         }
         
-        if (theActiveTab != nil && focusedTabProxy != theActiveTab) {
-            RELEASE_TO_NIL(focusedTabProxy);
-            focusedTabProxy = [theActiveTab retain];
+        if (theActiveTab != nil && focused != theActiveTab) {
+            RELEASE_TO_NIL(focused);
+            focused = [theActiveTab retain];
         }
 
         [self tabController].viewControllers = nil;
         [self tabController].viewControllers = controllers;
-        if ( focusedTabProxy != nil && ![tabs containsObject:focusedTabProxy]) {
+        if ( focused != nil && ![tabs containsObject:focused]) {
             if (theActiveTab != nil) {
                 [self setActiveTab_:theActiveTab];
             }
             else {
                 DebugLog(@"[WARN] ActiveTab property points to tab not in list. Ignoring");
-                RELEASE_TO_NIL(focusedTabProxy);
+                RELEASE_TO_NIL(focused);
             }
         }
 
         [controllers release];
     }
     else {
-        RELEASE_TO_NIL(focusedTabProxy);
+        RELEASE_TO_NIL(focused);
         [self tabController].viewControllers = nil;
     }
 
-    [self.proxy	replaceValue:focusedTabProxy forKey:@"activeTab" notification:YES];
+    [self.proxy	replaceValue:focused forKey:@"activeTab" notification:YES];
     [self setAllowUserCustomization_:[NSNumber numberWithBool:allowConfiguration]];
 }
 
@@ -517,11 +500,11 @@ DEFINE_EXCEPTIONS
 	// on an open, make sure we send the focus event to focused tab
     NSArray * tabArray = [controller viewControllers];
     int index = 0;
-    if (focusedTabProxy != nil)
+    if (focused != nil)
 	{
-		index = [tabArray indexOfObject:[(TiUITabProxy *)focusedTabProxy controller]];
+		index = [tabArray indexOfObject:[(TiUITabProxy *)focused controller]];
 	}
-	NSDictionary *event = [NSDictionary dictionaryWithObjectsAndKeys:focusedTabProxy,@"tab",NUMINT(index),@"index",NUMINT(-1),@"previousIndex",[NSNull null],@"previousTab",nil];
+	NSDictionary *event = [NSDictionary dictionaryWithObjectsAndKeys:focused,@"tab",NUMINT(index),@"index",NUMINT(-1),@"previousIndex",[NSNull null],@"previousTab",nil];
 	[self.proxy fireEvent:@"focus" withObject:event];
     
     // Tab has already been focused by the tab controller delegate
@@ -535,6 +518,29 @@ DEFINE_EXCEPTIONS
 		controller.viewControllers = nil;
 	}
 	RELEASE_TO_NIL(controller);
+}
+
+
+-(void)focusVisibleWindow
+{
+	UINavigationController * ourCurrentNC = (UINavigationController *)[controller selectedViewController];
+	TiUITabController * ourCurrentVC = (TiUITabController *)[ourCurrentNC visibleViewController];
+	if([ourCurrentVC isKindOfClass:[TiUITabController class]])
+	{
+		TiWindowProxy * ourCurrentWindow = [ourCurrentVC window];
+		[ourCurrentWindow _tabFocus];
+	}
+}
+
+-(void)blurVisibleWindow
+{
+	UINavigationController * ourCurrentNC = (UINavigationController *)[controller selectedViewController];
+	TiUITabController * ourCurrentVC = (TiUITabController *)[ourCurrentNC visibleViewController];
+	if([ourCurrentVC isKindOfClass:[TiUITabController class]])
+	{
+		TiWindowProxy * ourCurrentWindow = [ourCurrentVC window];
+		[ourCurrentWindow _tabBlur];
+	}
 }
 
 @end

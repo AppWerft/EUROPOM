@@ -493,14 +493,6 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)tf
 {
-    TiUITextWidgetProxy * ourProxy = (TiUITextWidgetProxy *)[self proxy];
-    
-    //TIMOB-14563. Set the right text value.
-    if ([ourProxy suppressFocusEvents]) {
-        NSString* theText = [ourProxy valueForKey:@"value"];
-        [tf setText:theText];
-    }
-    
 	[self textWidget:tf didFocusWithText:[tf text]];
 	[self performSelector:@selector(textFieldDidChange:) onThread:[NSThread currentThread] withObject:nil waitUntilDone:NO];
 }
@@ -533,13 +525,7 @@
 
 - (void)textFieldDidChange:(NSNotification *)notification
 {
-    TiUITextWidgetProxy * ourProxy = (TiUITextWidgetProxy *)[self proxy];
-    
-    //TIMOB-14563. This is incorrect when passowrd mark is used. Just ignore.
-    if ([ourProxy suppressFocusEvents]) {
-        return;
-    }
-    [ourProxy noteValueChange:[(UITextField *)textWidgetView text]];
+	[(TiUITextFieldProxy *)self.proxy noteValueChange:[(UITextField *)textWidgetView text]];
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)tf

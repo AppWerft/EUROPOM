@@ -43,11 +43,6 @@
 		[searchView setShowsCancelButton:[(TiUISearchBarProxy *)[self proxy] showsCancelButton]];
 		[self addSubview:searchView];
 	}
-    //IOS7 DP3 bug fix. See searchcontroller delegate method in listView.
-    if ([searchView superview] != self) {
-        [self addSubview:searchView];
-        [searchView setFrame:[self bounds]];
-    }
 	return searchView;
 }	
 
@@ -123,16 +118,6 @@
 -(void)setAutocapitalization_:(id)value
 {
 	[[self searchBar] setAutocapitalizationType:[TiUtils intValue:value]];
-}
-
--(void)setTintColor_:(id)color
-{
-    if ([TiUtils isIOS7OrGreater]) {
-        TiColor *ticolor = [TiUtils colorValue:color];
-        UIColor* theColor = [ticolor _color];
-        [[self searchBar] performSelector:@selector(setTintColor:) withObject:theColor];
-        [self performSelector:@selector(setTintColor:) withObject:theColor];
-    }
 }
 
 -(void)setBarColor_:(id)value

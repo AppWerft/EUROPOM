@@ -149,11 +149,6 @@
 		return;
 	}
 	
-    if ([arg conformsToProtocol:@protocol(TiWindowProtocol)]) {
-        DebugLog(@"Can not add a window as a child of a view. Returning");
-        return;
-    }
-    
 	if ([NSThread isMainThread])
 	{
 		pthread_rwlock_wrlock(&childrenLock);
@@ -1326,8 +1321,24 @@ LAYOUTFLAGS_SETTER(setHorizontalWrap,horizontalWrap,horizontalWrap,[self willCha
 
 -(CGRect)appFrame	//TODO: Why is this here? It doesn't have anything to do with a specific instance.
 {
-	CGRect result = [[[[TiApp app] controller] view] bounds];
-    return result;
+	CGRect result=[[UIScreen mainScreen] applicationFrame];
+	switch ([[UIApplication sharedApplication] statusBarOrientation])
+	{
+		case UIInterfaceOrientationLandscapeLeft:
+		case UIInterfaceOrientationLandscapeRight:
+		{
+			CGFloat leftMargin = result.origin.y;
+			CGFloat topMargin = result.origin.x;
+			CGFloat newHeight = result.size.width;
+			CGFloat newWidth = result.size.height;
+			result = CGRectMake(leftMargin, topMargin, newWidth, newHeight);
+			break;
+		}
+		default: {
+			break;
+		}
+	}
+	return result;
 }
 
 

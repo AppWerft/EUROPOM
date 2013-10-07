@@ -444,14 +444,6 @@ DEFINE_EXCEPTIONS
 
 #pragma mark Public APIs
 
--(void)setTintColor_:(id)color
-{
-    if ([TiUtils isIOS7OrGreater]) {
-        TiColor *ticolor = [TiUtils colorValue:color];
-        [self performSelector:@selector(setTintColor:) withObject:[ticolor _color]];
-    }
-}
-
 -(void)setBorderColor_:(id)color
 {
 	TiColor *ticolor = [TiUtils colorValue:color];
