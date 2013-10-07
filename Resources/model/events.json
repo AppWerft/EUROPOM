@@ -1,0 +1,209 @@
+[
+	{
+		"theme": "Begrüßung",
+		"sessions": [
+			{
+				"date": "Freitag 10:00",
+				"referent": "Dr. Carsten Schirarend ",
+				"title": "Begrüßung",
+				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/europom.pdf",
+				"thumbs" : 32,
+				"image": "/assets/schirarend.png",
+				"summary":"Für die Veranstalter der Norddeutschen Apfeltage ist die EUROPOM 2013 ein ganz besonderes Ereignis. 12 Organisationen aus zehn Ländern sind an die- sem Wochenende in Hamburg zu Gast, um Ihnen die Vielseitigkeit des traditionellen Obstbaues in Europa zu vermitteln und damit die Notwendigkeit seiner Erhaltung zu zeigen.\n\nNicht zuletzt hat der internationale Austausch über Anbaumethoden und Sorten im Laufe von Jahrhun- derten dazu geführt, dass allein im norddeutschen Raum um das Jahr 1800 rund 700 verschiedene Apfelsorten dokumentiert sind. Für diesen Aus- tausch steht auch der Apfel des Jahres 2013, der Knebusch. Es heißt, dass der „Entdecker“ dieses Apfels, Johann Knebusch, ein Edelreis von seinem zukünftigen Schwiegersohn als Mitbringsel aus Amerika bekommen hat.\n\nViele der alten Apfelsorten sind aus den Gärten und Obstwiesen verschwunden. In zahlreichen Regionen haben sich deshalb Obstkundler, Naturschützer und in zunehmendem Maße auch Kommunen zusammen- geschlossen, die verbliebenen Streuobstwiesen zu erhalten und neue Flächen mit traditionellen Sorten anzulegen.\n\nWerden Sie Teil dieser Bewegung! Lassen Sie sich auf der Europom von unserer großen Apfelausstel- lung inspirieren und probieren Sie die besonderen Aromen ausgefallener Sorten. Die Veranstalter wünschen Ihnen dabei viele neue Eindrücke und vor allem viel Spaß."
+			}
+		]
+	},{
+		"theme": "Samstagsvorlesungen",
+		"sessions": [
+			{
+				"date": "Samstag 13:30",
+				"referent": "Beate Holderied",
+				"image": "http://www.streuobst-paedagogen.de/uploads/images/strop_web_300/strop_04_streuobstp%C3%A4dagogen/strop_personen_praesentation/strop_paed_holderied_beate.jpg",
+				"title": "Die Streuobstwiese – Unser Klassenzimmer im Grünen ",
+				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/klassenzimmer.pdf",
+				"thumbs":50,
+				"audio" :"http://lab.min.uni-hamburg.de/store/europom/audio/streuobstwiese.mp3",
+				"summary":"Das Projekt „Die Streuobstwiese – Unser Klassenzimmer im Grünen“ wurde von Beate Holderied konzipiert und im Schuljahr 2003/2004 an der Grundschule in Weil im Schönbuch zum ersten Mal durchgeführt. Die Erstklässler lernen die Streuostwiese mit all ihren Facetten in den verschiedenen Jahreszeiten kennen. Sowohl obstbauliche (Pflanzen und Pflege, Ernte, Verarbeitung, …) als auch naturschutzfachliche Themen (Spurensuche im Schnee, Befruchtung, Kräuterwanderung, Insekten …) stehen auf der Unterrichtsagenda auf der Wiese. Wichtig ist dabei der naturpädagogische Ansatz des Lernens mit allen Sinnen. Die Kinder sollen die Natur „begreifen“.\n\n2010 ist in Zusammenarbeit mit dem Landkreis Zollernalb die Schrift „Das Klassenzimmer im Grünen – Leitfaden für ein Schuljahr mit Obstwiesen“ entstanden. 2011 wurde die Böblinger Streuobstschule gegründet. Seitdem wurden knapp 70 Streuobst-Pädagogen aus Baden-Württemberg ausgebildet. Die Ausschreibung für die Ausbildung 2014 läuft bereits (Infos unter www. streuobst-paedagogen.de).\n\nSeit 2012 stellt der Landkreis Böblingen jährlich Mittel zur Teilfinanzierung von Streuobstunterricht an 60 Grundschulklassen zur Verfügung.\n\nIn diesem Jahr wurde auch der Verein der Streuobst-Pädagogen gegründet."
+			}, {
+				"date": "Samstag 14:00",
+				"image":"http://lab.min.uni-hamburg.de/store/europom/slides/apfeltante.png",
+				"referent": "Dr. Susanne Becker",
+				"audio" :"http://lab.min.uni-hamburg.de/store/europom/audio/allergien.mp3",
+				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/beissnicht.pdf",
+				"thumbs":56,
+				"summary":"Allein in Deutschland leiden ca. zwei Millionen Menschen unter einer Allergie gegen Äpfel. Nach dem Biss in einen frischen Apfel verspüren die Betroffenen ein unangenehmes Kribbeln im Mund, Lippen und Mundschleimhäute schwellen an, selten kommt es sogar zu Schluckbeschwerden. Schuld an der Apfelallergie ist bei Nord- und Mitteleuropäern meist eine sogenannte Kreuzallergie: Der Körper eines Birkenpollenallergikers verwechselt ein Eiweißmolekül aus dem Apfel mit einem Protein aus den Pollen.\n\nIn letzter Zeit werden in Zeitschriften- und Fernsehbeiträgen alte Apfelsorten immer wieder pauschal als gut verträglich für Apfelallergiker empfohlen, was meist mit ihrem höheren Polyphenolgehalt begründet wird. Deshalb bitten Apfelallergiker immer wieder um Empfehlungen für gut verträgliche Apfelsorten. Doch aus pomologischer und auch aus medizinischer Sicht ist das Thema Apfelallergie sehr viel komplexer.",
+				"title": "Beiß nicht gleich in jeden Apfel – Apfelallergie "
+			}, {
+				"date": "Samstag 14:30",
+				"referent": "Dr. Stephan Barth",
+				"summary":"Der Apfel ist eine Frucht, die in einer vollwertigen Ernährung nicht fehlen sollte. Als Saft oder Frucht genossen findet er einen großen Zuspruch beim Verbraucher in Deutschland. Der Apfel enthält verschiedene Mineralstoffe und ein breites Spektrum an Vitaminen, wie Folsäure, Vitamin C und E sowie B-Vitamine. Außerdem stecken in Äpfeln sogenannte sekundäre Pflanzenstoffe, wie z.B. Polyphenole. Diese Substanzen schützen, wie auch Vitamin C, Körperzellen vor schädigenden Einfluss von reaktiven Sauerstoff-Molekülen. Außerdem können sie dem Körper bei der Entgiftung helfen. Mittlerweile mehren sich die Hinweise darauf, dass die Inhaltsstoffe des Apfels auch vor Krebs schützen können. Nachgewiesenermaßen besitzen alte Apfelsorten einen höheren Gehalt an sekundären Pflanzenstoffen als die klassischen Tafeläpfel aus dem Supermarkt. Im Rahmen seines Vortrages wird Dr. Barth ausgewählte Daten aus der wissenschaftlichen Literatur und eigenen Forschungsarbeiten (www.nutrhi.net) zur gesundheitlichen Wirkung des Apfels „mundgerecht“ präsentieren und dabei auch sprichwörtliche Gesundheitsweisheiten zum Apfel beleuchten.",
+				"image": "http://www.bund-lemgo.de/download/Dr._Stephan_Barth_04.jpg",
+				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/apfelmedizin.pdf",
+				"thumbs" : 24,	
+				"audio" : "http://lab.min.uni-hamburg.de/store/europom/audio/apfeldoc.mp3",
+				"title": "Ein Apfel am Tag erspart den Besuch beim Arzt“ – Fakt oder Fiktion?"
+			}, {
+				"date": "Samstag 15:10",
+				"referent": "Hans-Thomas Bosch",
+				"image": "http://lab.min.uni-hamburg.de/store/europom/slides/allgaeuer.png",
+				"summary":"Im bayerischen Allgäu wurden zwischen 2009 und 2013 die Kernobstsorten in kleinbäuerlich geprägten Obstgärten erfasst. 257 Apfel- und Birnensorten ließen sich sicher bestimmen, außerdem entstand an der Versuchsstation der Hochschule Weihenstephan-Triesdorf ein Sortengarten mit 84 Apfel- und 84 Birnensorten.\n\nIn Regionen, in denen der ländliche, durch extensive Bewirtschaftung geprägte traditionelle Hochstamm- obstbau nicht verdrängt wurde, ist ein beachtliches Reservoir an seltenen und erhaltungswürdigen alten Sorten vorzufinden. Wie lange im Allgäu bereits Obstbau betrieben wird, zeigt der etwa 400jährige Birnbaum mit beachtlichen 430 cm Stammumfang. Auch deuten die nahezu 100 Varietäten, die auch nach eingehender pomologischer Bearbeitung nicht bestimmt werden konnten, auf eine lange Obstbautradition hin. Die Weitergabe von Sorten über große Distanzen dürfte bereits so lange Tradition haben wie der Obstbau selbst. Im Allgäu gibt es beispielsweise Sorten wie „Rotes Seidenhemd“, „Groninger Krone“ oder „Berliner“, die man eher aus dem Raum Bremen kennt. Der „Doppelte Prinzenapfel“ ist im Oberallgäu eine der häufigsten Sorten überhaupt, sein Entstehungs- und Verbreitungsgebiet liegt aber in Norddeutschland. Er hat sich mittlerweile bestens an das vorherrschende raue Voralpenklima angepasst und ist bis in Höhenlagen von 1000 m nachzuweisen.",
+			"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/allgaeu.pdf",
+			"thumbs" : 38,
+				"title": "Norddeutsche Apfelsorten im Allgäu"
+			}, {
+				"date": "Samstag 15:40",
+				"referent": "Dirk Müller / Anja Abdank",
+				"image": "http://lab.min.uni-hamburg.de/store/europom/slides/mueller.jpg",
+				"summary":"Zur gegenseitigen Unterstützung und zum regelmäßigen Erfahrungsaustausch wurde 2009 das „Netzwerk Streuobst MV“ ins Leben gerufen. Als einer der Initiatoren startete der Förderverein Bützower Land e.V. das erste Projekt, den „Streuobst-Kreativ-Kalender Mecklenburg-Vorpommern“. Im Herbst 2011 folgte die Wanderausstellung „Streuobst in Mecklenburg-Vorpommern“ des NABU und 2012 die „Interaktive Streuobsterfassung in Mecklenburg-Vorpommern“: Ausgehend von Ergebnissen einer landesweit durchgeführten Streuobsterfassung in den Jahren 1993-1995 entstand unter der Regie des FV Bützower Land e.V. ein Internetportal, das es jedermann ermöglicht, Streuobstvorkommen einzugeben und damit für die gemeinsame Arbeit zugänglich zu machen. Es ist eine Erweiterung des bewährten Internetportals der Floristischen Datenbanken Mecklenburg-Vorpommern, die von ehrenamtlichen Botanikern bereits seit Jahren zur Erfassung von Pflanzenfunden genutzt wird. Das Portal ist unter http://streuobst.flora-mv.de erreichbar.",
+				"title": "Streuobst-Online-Erfassung in Mecklenburg-Vorpommern"
+			}, {
+				"date": "Samstag 16:10",
+				"referent": "Sabine Washof",
+				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/streukataster.pdf",
+				"thumbs" : 55,
+				"image": "/assets/washof.png","summary":"Der BUND Niedersachsen setzt sich für den Schutz der letzten verbliebenen Streuobstwiesen ein. Dafür wurde das Projekt „Streuobstwiesenkataster Niedersachsen“ ins Leben gerufen. Auf www.streuobstwiesen-niedersachsen.de werden Fragen wie „Wo kann ich Saft von Streuobst-Bäumen kaufen?“, „Wann findet das nächste Obstblütenfest in meiner Nähe statt?“ oder „Wächst in Niedersachen noch irgendwo der Pfannkuchenapfel?“ beantwortet.\n\n Das Projekt war zunächst auf vier Modelllandkreise beschränkt. Ziel ist es, niedersachsenweit Informationen zu Streuobstwiesen, Veranstaltungen und Streuobstwiesenprodukten in einer Datenbank zu sammeln und diese der Öffentlichkeit zur Verfügung zu stellen. Die Informationsplattform ist verbandsübergreifend und lebt von gegenseitiger Unterstützung aller Akteure. Das BUND-Projekt wird unterstützt von einem Fachbeirat, in dem Vertreter wichtiger Institutionen zusammen kommen. Aufgabe des Fachbeirates ist es, bis zum Projektende eine verbindliche und stabile Trägerschaft für die Weiterführung der Plattform gefunden zu haben, z. B. in einem eigenen e.V. oder durch eine Kooperationsvereinbarung.\n\nÜber das entstehende Netzwerk der Plattform sollen zusätzlich alle Gruppen und Initiativen miteinander ins Gespräch kommen, die sich schon heute für den Erhalt von Streuobstwiesen einsetzen.",
+				"title": "Streuobstwiesenkataster des BUND in Niedersachsen"
+			}, {
+				"date": "Samstag 16:50",
+				"referent": "Dr. Gisela Bertram",
+				"image":"http://lab.min.uni-hamburg.de/store/europom/slides/wilhelmsburg.jpg",
+				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/wilhelmsburg.pdf",
+				"thumbs" : 55,
+				"summary":"Die Stiftung Ausgleich Altenwerder hat die Aufgabe, im Naturraum der Elbe in Hamburg Flächen zu erhalten und naturschutzfachlich aufzuwerten ist. Auf der Elbinsel Wilhelmsburg hat die Stiftung die Obstweide am Jakobsberg erworben. Der Erhalt und die Pflege der Obstbäume sind ebenso Ziele woe die Erhöhung der Sortenvielfalt. Der Steinkauz ist eine Zielart für unsere Arbeit","title": "Jakobsberg: Eine Obstweide auf der Elbinsel Wilhelmsburg in Hamburg."
+			}
+		]
+	}, {
+		"theme": "Sortenerhaltung",
+		"sessions": [
+			{
+				"date": "Freitag 10:15",
+				"referent": "Dr. Monika Höfer","summary":"Das Institut für Züchtungsforschung an gartenbaulichen Kulturen und Obst des Julius Kühn-Institutes (JKI) in Dresden-Pillnitz hat die Aufgabe, obstgenetische Ressourcen zu erhalten und neue Obstsorten bei Apfel, Kirsche und Erdbeere zu züchten. Schwerpunkte der Züchtungsarbeiten sind neben der Erhöhung der Fruchtqualität vor allem die Verbesserung der Resistenz neuer Obstsorten gegenüber bedeutenden Schaderregern und abiotischen Stressfaktoren. Dabei kommt der Suche nach geeigneten genetischen Ressourcen in den mit Kulturarten verwandten Wildarten eine herausragende Bedeutung zu.\n\nDer Kaukasus mit seinen unermesslichen Wäldern, die einzig und allein aus den wilden Vorfahren des Obstes bestehen (Vavilov, 1930), gilt als eines der reichsten Diversitätszentren von wilden Obstarten der Erde: Über 260 Arten von 37 Gattungen wurden nachgewiesen. Unter diesem Gesichtspunkt erfolgten in den Jahren 2011 und 2012 zwei Sammelexpeditionen in den Nordkaukasus, an denen sowohl Wissenschaftler aus dem JKI als auch des Nikolai I. Vavilov Forschungsinstitutes für Pflanzenbau in St. Petersburg und Maikop teilnahmen. Das gesammelte Material wird gegenwärtig evaluiert und auf das Vorkommen wertgebender Eigenschaften geprüft, um neues Ausgangsmaterial für künftige Züchtungsarbeiten bereitzustellen.",
+				"image": "http://zuhause3.dstatic.de/img/photos/full/5/8/dr-monika-hoefer-jahrgang-1960-ist-kuratorin-der-obst-genbank-des-julius-kuehn-instituts-institut.jpg",
+				"title": "Der Kaukasus - ein Genzentrum obstgenetischer Ressourcen"
+			}, {
+				"date": "Freitag 10:50",
+				"referent": "Frank Singhof ",
+				"image": "",
+				"summary":"Obstkundliche Werke und Periodika bilden einen Schwerpunkt der Sammlung Gartenbaubücherei. Teile des Bestandes stammen noch aus dem Besitz des Dt. Pomologenvereins von 1860. Vorgestellt wird ein Querschnitt der pomologischen Literatur, deren Bezeichnung auf Johann Knoops 1758 veröffentlichte „Pomologia“ zurückzuführen ist. Beschrieben wird ferner die Friesen’sche Sammlung von Obstsortendarstellungen und –beschreibungen. Darüber hinaus bietet die Bücherei eine Reihe von Recherchemöglichkeiten zum Thema Obstbau/ Obstkunde in Dokumentationskarteien vor Ort und nicht zuletzt im Internet (z.B. Pomologische Bibliothek).",
+				"title": "Obstkundliche Literatur in der Bibliothek des dt. Gartenbaus",
+				"slides" : "http://lab.min.uni-hamburg.de/store/europom/slides/obstliteratur.pdf",
+				"thumbs" : 17  
+			}, {
+				"date": "Freitag 11:20",
+				"referent": "Henryk Flachowsky, Dr. Monika Höfer",
+				"image": "http://zuhause3.dstatic.de/img/photos/full/5/8/dr-monika-hoefer-jahrgang-1960-ist-kuratorin-der-obst-genbank-des-julius-kuehn-instituts-institut.jpg",
+				"summary":"Seit Beginn des letzten Jahrhunderts werden in Deutschland obstgenetische Ressourcen in unterschiedlichsten Sammlungen erhalten. Sie sind ein Stück Kulturgeschichte und bilden die genetische Basis für die Züchtung neuer Obstsorten. Mit ihnen wird es möglich sein, umweltfreundlich hohe Erträge von qualitativ hochwertigen Früchten zu produzieren. Doch die Verteilung der genetischen Ressourcen ist schwierig: Werden einzelne Genotypen in vielen Sammlungen erhalten, kommen andere nur noch selten oder gar nicht vor. Dies führt langfristig zu einem schleichenden Verlust.\n\nUm dieses Risiko zu minimieren, wurde mit der Deutschen Genbank Obst (DGO) ein dezentrales Erhaltungsnetzwerk gegründet. Die DGO besteht aus einzelnen obstartenspezifischen Netzwerken, in denen sammlungshaltende Partner organisiert sind. Partner können Bundes- und Landeseinrichtungen, Landkreise, Kommunen sowie Vereine und andere nicht staatliche Organisationen sein, die sich verpflichten, ihre Sammlungen zu erhalten, zu evaluieren und zu dokumentieren. Darüber hinaus verpflichten sie sich auch zur Abgabe von Pflanzenmaterial. Die Koordinierungsstelle der DGO befindet sich am Institut für Züchtungsforschung an gartenbaulichen Kulturen und Obst des Julius Kühn-Instituts (JKI) in Dresden. Die Dokumentation der zu erhaltenden Sorten erfolgt über die unter http://www.deutsche-genbank-obst.jki.bund.de/ zu erreichende Internetseite.",
+				"title": "Die Deutsche Genbank Obst (DGO) - ein Netzwerk zur Erhaltung heimischer obstgenetischer Ressourcen"
+			}, {
+				"date": "Freitag 12:00",
+				"summary":"Hans-Joachim Bannier pflanzte in seinem Obst-Arboretum über 300 verschiedene – alte und moderne – Apfelsorten. In seinem Vortrag berichtet er von seinen Erfahrungen und über die Einflussnahme der chemischen Industrie auf den modernen Obstanbau.\n\nDie meisten Apfelsorten werden für den Erwerbsobstbau gezüchtet. Als Nebenprodukt entstehen Varianten für den Streuobst- und Liebhaberanbau. Sie überschwemmen vielerorts bereits das Baumschulangebot. Untersucht man diese Sorten, wird deutlich, dass nahezu sämtliche Züchtungen der letzten 80 Jahre von den fünf Klassikern Golden Delicious, Cox Orange, Jonathan, McIntosh und Red Delicious abstammen. Da jedoch ausgerechnet diese Sorten stark krankheitsanfällig sind, hat die genetische Verengung dramatische Folgen für die Vitalität des modernen Obstbaus. Damit diese krankheitsanfälligen Sorten dennoch erfolgreich angebaut werden können, berichten Fachzeitschriften hauptsächlich über Pflanzenschutz und die Industrie bringt eine Vielzahl von Fungiziden auf den Markt.\n\nDer „Blick zurück“ auf die sogenannten alten Sorten ist daher keineswegs nur ein romantischer Nostalgie- Reflex, sondern eine Voraussetzung, um die tiefgreifende ökologische Krise des gegenwärtigen Obstbaus zu verstehen und Wege aus dieser Krise zu finden. Deutlich werden die Probleme moderner Sorten erst, wenn sie in Streuobstwiesen oder Hausgärten – unter Verzicht auf den Einsatz von chemischen Pflanzenschutzmitteln –gepflanzt werden.",
+				"referent": "Hans-Joachim Bannier",
+				"image": "http://www.nw-news.de/_em_daten/_nw/2009/09/02/090902_2007_bi1.jpg",
+				"title": "Apfelsorten im modernen Obstbau"
+			}, {
+				"date": "Freitag 13:30",
+				"summary":"Praxisnahe Forschung für den Obstbau stellt eine der drei Hauptaufgaben des ESTEBURG Obstbauzentrum Jork dar: In Hunderten von Versuchen werden jedes Jahr diverse Obstsorten auf den angeschlossenen Versuchsbetrieben bearbeitet. Neben Anbautechniken und Pflanzsystemen beschäftigen wir uns mit Schädlingsbefall und Krankheiten sowie mit Erntesystemen und Lagerungstechnik. Wir beraten zirka 1.400 Obstbaubetriebe in Norddeutschland zu Kulturführung, Pflanzenschutz, Düngung, Ernteverfahren und Lagerung und sprechen Sortenempfehlungen aus. Auch beantworten wir betriebswirtschaftliche und sozioökonomische Fragen und informieren über die Anforderungen des ökologischen Anbaus. Wir veranstalten Vorernteführungen, winterliche Sprechtage und ca. 140 Pflanzenschutzbegehungen pro Saison. Eine zentrale Informationsveranstaltung für Obstbauern ist die jährlich im Februar stattfindende Fachmesse „Norddeutsche Obstbautage“ in Jork.\n\nNur gut ausgebildete und informierte Obstbauern haben dauerhaft Erfolg. Daher ist die Aus- und Weiterbildung unser dritter Aufgabenschwerpunkt. Wir bilden seit vielen Jahren Gärtner der Fachrichtung Obstbau, Berater, Obstbaumeister und landwirtschaft-technische Assistenten aus. Zudem lässt sich an der ESTEBURG berufsbegleitend die integrierte Betriebsleiterausbildung zum staatlich geprüften Wirtschafter einschlagen. Des Weiteren werden Seminare und Qualifizierungsmaßnahmen im Rahmen der Erwachsenenbildung angeboten.",
+				"referent": "Dr. Matthias Görgens",
+				"image": "/assets/goergens.png",
+				"title": "ESTEBURG - Obstbauzentrum Jork "
+			}, {
+				"date": "Freitag 14:10",
+				"referent": "Jan Bade,Dr. Annette Braun-Lüllemann",
+				"summary" :"Um dem rasanten Sortenschwund der letzten Jahrzehnte Einhalt zu gebieten und die bereits existierenden Initiativen und Aktivitäten zur Sortenerhaltung zu koordinieren, wurde das Erhalternetzwerk Obstsortenvielfalt des Pomologen-Vereins gegründet. Ziel ist eine langfristige und dezentrale Erhaltung aller aktuell verfügbaren alten Obstsorten in Deutschland. Hierfür werden Sammlungen von Mitgliedern in einer gemeinsamen Datenbank erfasst und die Bäume von Experten des Vereins auf ihre Sortenechtheit überprüft. Diese zertifizierten Sorten können in Form von Edelreisermaterial weitergegeben werden. Zusätzlich erfolgen Neuanpflanzungen in bestehenden und neu entstehenden Sammlungen. Das Hauptaugenmerk liegt neben den sehr seltenen auch auf bisher namentlich unbekannten Obstsorten. Das Projekt wird aktuell von der Heidehof Stiftung Stuttgart gefördert.",
+				"title": "Erhalternetzwerk Obstsortenvielfalt des Pomologen-Vereins e.V."
+			}
+		]
+	}, {
+		"theme": "Obstgehölzepflege",
+		"sessions": [
+			{
+				"date": "Freitag 15:00",
+				"referent": "Roland Jeschke",
+				"summary":"Pflanztiefe: Der Grundsatz, dass die Veredelungsstelle mindestens 5–10 cm aus dem Boden herausragen sollte, wird oft fehlinterpretiert. Bei einer Veredlungshöhe von 25 cm wäre der Baum dann nämlich 15–20 cm zu tief gepflanzt!\n\nDüngen: Hier geht es nicht um Ertragssteigerung, sondern um den Ausgleich von Nährstoffdefiziten. So waren auf Streuobststandorten im Landkreis Göppingen von 114 Standorten nur 8 ausreichend mit Phosphor, Kalium und Magnesium versorgt.\n\nWässern: Im Garten- und Landschaftsbau wird wegen veränderter Niederschlagsverteilung zunehmend nicht mehr bis zum 3., sondern bis zum 5. Standjahr gewässert, auf Extremstandorten sogar 8 Jahre.\n\nSchermausschutz mittels Drahtkorb: Neuere Untersuchungen zeigen, dass im Bereich von verzinkten Drahtzäunen auf leichten Böden der Zinkgehalt pflanzentoxische Grenzwerte erreichen kann.\n\nWildschutz: Seit Jahren werden verschiedene Arten von Plastikmanschetten eingesetzt, die wegen der fehlenden Hinterlüftung auf der Sonnenseite zu Temperaturen von über 50°C und dadurch zu Rindenschäden führen.\n\nThermischer Rindenschutz: Jungbaumpflanzungen werden zunehmend durch „Baumweißeln“ geschützt. Statt der üblichen 10–15 Kalkanstriche in 5 Jahren ist durch eine Neuentwicklung nunmehr nur noch ein Anstrich notwendig.",
+				"title": "Fehler beim Pflanzen von Obstgehölzen",
+				"slides" : "http://lab.min.uni-hamburg.de/store/europom/slides/pflanzfehler.pdf",
+				"thumbs" : 23  
+			}, {
+				"date": "Freitag 15:30",
+				"referent": "Ingmar Kruckelmann ",
+				"summary":"Die AG „Obstgehölzpflege“ des Pomologenvereins ist eine bundesweite Austauschplattform für ObstbaumpflegerInnen. Als Ergebnis davon etablieren sich neue Ansätze in der Obstbaumpflege. Überwogen bisher obstbauliche Gesichtspunkte, so stehen heute durch den zunehmenden Naturschutzkontext der Baumerhalt genauso im Vordergrund wie die Obstnutzung.\n\nEin Beispiel für die neue Ausrichtung ist die stärkere Gewichtung der Baumansprache. Durch diese wird die Entscheidung über Art, Intensität und Zeitpunkt einer Schnittmaßnahme in Abhängigkeit von Pflege-Winterschnittziel und Baumzustand getroffen und kann so besser nachvollzogen werden. Die AG „Obstgehölzpflege“ möchte Qualitätsstandards für die Obstbaumpflege setzen. In prägnanter Form werden systematische Vorgehensweisen beschrieben, Begriffe definiert und Qualitätskriterien für Erziehung, Pflege und Schnitt von langlebigen Hochstamm-Obstbäumen formuliert.\n\nDie Arbeitsgruppe ist grundsätzlich offen für alle, die sich mit Engagement und Wissen einbringen möchten.",
+				"image": "http://hof-medewege.de/tl_files/Bilder/Personen/Portraets%20der%20Woche/Ingmar.jpg",
+				"title": "AG Obstbaumpflege: Gemeinsame Standards in der Obstgehölzpflege "
+			}
+		]
+	}, {
+		"theme": "Obstvermarktung",
+		"sessions": [
+			{
+				"date": "Freitag 16:20",
+				"referent": "Dr. Susanne Becker",
+				"audio" :"http://lab.min.uni-hamburg.de/store/europom/audio/allergien.mp3",
+				"image":"http://lab.min.uni-hamburg.de/store/europom/slides/apfeltante.png",
+				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/beissnicht.pdf","thumbs": 40,
+				"summary":"Allein in Deutschland leiden ca. zwei Millionen Menschen unter einer Allergie gegen Äpfel. Nach dem Biss in einen frischen Apfel verspüren die Betroffenen ein unangenehmes Kribbeln im Mund, Lippen und Mundschleimhäute schwellen an, selten kommt es sogar zu Schluckbeschwerden. Schuld an der Apfelallergie ist bei Nord- und Mitteleuropäern meist eine sogenannte Kreuzallergie: Der Körper eines Birkenpollenallergikers verwechselt ein Eiweißmolekül aus dem Apfel mit einem Protein aus den Pollen.\n\nIn letzter Zeit werden in Zeitschriften- und Fernsehbeiträgen alte Apfelsorten immer wieder pauschal als gut verträglich für Apfelallergiker empfohlen, was meist mit ihrem höheren Polyphenolgehalt begründet wird. Deshalb bitten Apfelallergiker immer wieder um Empfehlungen für gut verträgliche Apfelsorten. Doch aus pomologischer und auch aus medizinischer Sicht ist das Thema Apfelallergie sehr viel komplexer.",
+				"title": "Beiß nicht gleich in jeden Apfel – Apfelallergie aus pomologischer Sicht"
+			}, {
+				"date": "Freitag 16:50",
+				"referent": "Eckardt Brandt",
+				"image": "/assets/brandt.png",
+				"title": "Boomgarden-Park",
+				"summary":"Seit fast 30 Jahren sammelt Eckart Brandt im Rahmen seines Boomgarden Projekts alte und vor allem regionale Obstsorten. Bislang waren seine Schätze verstreut auf verschieden Pachtflächen untergebracht, was für ein Sortenerhaltungsprojekt natürlich keine endgültige Lösung sein kann. Jetzt hat das Projekt auf der Stader Geest in Helmste, 8 km südlich von Stade Richtung Harsefeld, ein neues Zuhause gefunden. Auf fast 4 Hektar Fläche wird seit Herbst 2012 die Brandtsche Sortensammlung neu aufgepflanzt; der größte Teil auf klassischen Hochstämmen, ein kleinerer Teil auf Halbstämmen. Insgesamt sollen etwa 350 alte Sorten bis zum Frühjahr 2014 aufgepflanzt werden, der größte Teil alte regionale Apfelsorten, aber auch zahlreiche norddeutsche (Koch-)Birnen, diverse Pflaumen und Wildpflaumen sowie etwa 30 alte Altländer Süßkirschensorten. Hinzu kommt eine Wildobsthecke mit etwa 15 verschiedenen Sträuchern und Büschen, die für Insekten und Vögel interessant sind und auch leckere Früchte zum Verarbeiten bieten werden. Bienen, Wildbienen und andere Insekten sollen durch eine besondere Wildblumenmischung gefördert werden. Für die Zukunft ist ein Gebäude geplant, in dem das Obst präsentiert und verarbeitet werden kann, sowie Veranstaltungen und Kurse stattfinden können.\n\nTräger des Projekts ist die BUND Kreisgruppe Stade in Zusammenarbeit mit der Boomgarden Regionalgruppe des Pomologen-Vereins. Tatkräftige Unterstützung des Projektes kam durch die Niedersächsische Bingolotto Stiftung, den Heimatverein Helmste und durch die zuständigen kommunalen Gremien. Eine sehr wertvolle Hilfe sind auch die Obstfreunde, die das Projekt durch die Übernahme einer Baumpatenschaft unterstützen."
+			}, {
+				"date": "Freitag 17.20",
+				"referent": "Ernst Schuster",
+				"title": "AKOWIA: Spannungsfeld Vermarktung und Ehrenamt "
+			}, {
+				"date": "Freitag 17:50",
+				"referent": "Georg Schenk",
+				"title": "Erhalten durch Vermarktung: Fürstlicher Obstgarten Bad Muskau"
+			}, {
+				"date": "Freitag 18:45",
+				"referent": "Hans Mäser",
+				"title": "Destillate- und Sensorik-Workshop für Pomologen (Kostenbeitrag) "
+			}
+		]
+	}, {
+		"theme": "Sonntagsvorlesungen (Bienentag)",
+		"sessions": [
+			{
+				"date": "Sonntag 10:30",
+				"referent": "Peter Klock",
+				"image": "http://www.suedflora.de/img/peterklock_start.jpg","summary":"Im Mittleren Osten der USA baut man die PawPaw (Asimina triloba), wie die Indianerbanane auch genannt wird, schon seit langem an. Sie ist Mitglied der Familie der Annonengewächse (Annonaceae), deren obstliefernde Arten überwiegend in Gegenden mit tropischem, subtropischem bzw. sehr warmem Klima angebaut werden. Doch die Indianerbanane weist eine ungewöhnlich hohe Frosttoleranz auf, die ihren Anbau auch im gemäßigten Klima erlaubt. \n\nPawPaw-Früchte können eine Länge von über zehn Zentimetern erreichen und erzielen auch bei uns einen tropisch-angenehmen Geschmack, der an Früchte wie Mango, Ananas und an ihre engen Verwandten, den Cherimoyas, erinnert. Noch ist diese Obstart hierzulande unbekannt, aber das kann sich wegen ihres hervorragenden Geschmackes und der Kulturbedingungen mittelfristig ändern. Die recht schwierige Vermehrung, das knappe Angebot an geeignetem Pflanzenmaterial und das stetig zunehmende Interesse an dieser Obstart spiegeln sich in den derzeitigen Preisen wider.",
+				"title": "Die Indianerbanane: eine „neue“ Obstart gewinnt an Bedeutung"
+			}, {
+				"date": "Sonntag 11:00",
+				"referent": "Michael Grolm",
+				"summary":"Der Vortrag befasst sich im Besondern mit der Bestäubungsleistung der Honigbienen mit dem Schwerpunkt Obst. An Hand von anschaulichen Bildern wird das Leben der Bienen und der Arbeitsablauf der Berufsimkerei am Beispiel der Schlossimkerei Tonndorf gezeigt. Sie liegt im Weimarer Land im Herzen von Thüringen und produziert zwölf eigene Bioland-Honigsorten, wie Streuobstblüten-, Kornblumen- oder Weißtannenhonig. Daneben gibt es eine breite Palette von Veredlungsprodukten wie Honigsenf, Honigwein, Honigschokolade usw.\n\nIm Bienenschaugarten werden die Besucher mit allen Sinnen an das Leben der Bienen herangeführt.",
+				"image": "http://zgtintern.de/ta/garten/index.php?rex_resize=367h__michael_grolm_tonndorf.jpg",
+				"title": "on Blumen und Bienen! Bestäubungsleistung der Honigbienen. "
+			}, {
+				"date": "Sonntag 11:30",
+				"referent": "Dr. Michaela Schweizer",
+				"image": "","summary":"Einerseits ist vom weltweiten Bienensterben die Rede und die Zahl der Bienenvölker in Deutschland schrumpft seit 1951, andererseits liest man immer öfter über Bienen, die mitten in Paris, New York, Berlin, Frankfurt oder Hamburg leben. Die Völker stehen auf Dächern, Balkonen, in Parkanlagen, auf Friedhöfen und in Gärten. Der Deutsche Imkerbund verzeichnet steigende Mitgliederzahlen. Der rapide Wandel unserer ländlichen Kulturlandschaft durch die Bewirtschaftung mit Monokulturen und immer früher und kürzer blühenden Nutzpflanzen führt dazu, dass Bienen im ländlichen Bereich ohne menschliche Hilfe verhungern. Pestizide, Parasiten und Krankheiten machen ihnen zusätzlich zu schaffen. Unsere Städte dagegen sind nahezu pestizidfrei und liefern den Bienen ein stetiges und abwechslungsreiches Nahrungsangebot: Gartenblumen, Obstbäume, Robinien, Linden und vieles mehr decken den Bedarf vom Frühjahr bis in den Herbst. Hobbyimker haben entdeckt, dass in Städten sogar mehr Honig geerntet werden kann als auf dem Land. Die Vielfalt und Qualität ist oft besser, die Völker sind gesünder. Das Phänomen Stadtbiene ist ein ökologisches Barometer, ein Spiegel der Qualität unserer Umwelt. Künstler und Initiativen wie z.B. „Hamburg summt“ machen auf ihre Art auf die Missstände aufmerksam.",
+				"title": "Phänomen Stadtbiene "
+			}, {
+				"date": "Sonntag 12:00",
+				"referent": "Erhard Maria Klein ",
+				"image": "http://www.bienenkiste.de/images/pic/erhard-kontakt.jpg",
+				"summary":"Bienenhaltung gehörte früher ganz selbstverständlich zur Landwirtschaft, für den Eigenbedarf und als kleines Zusatzeinkommen. Die Bestäubung lief „vollautomatisch“, da es überall genug Bienen gab. Doch die moderne Imkerei entwickelte sich im Zuge der Industrialisierung mehr und mehr zu einer hochspezialisierten Angelegenheit: auf maximalen Honigertrag ausgelegt und mit einem hohen Maß an Betreuungsaufwand und Fachwissen verbunden. Traditionelle einfachere Betriebsweisen gerieten zunehmend in Vergessenheit. Mit der Verarmung der Landschaft durch intensive Agrarproduktion begannen die Imker den blühenden Flächen mit ihren Bienenvölkern hinterher zu wandern. Auch dies begünstigte den Niedergang der traditionellen Betriebsweisen. Die gute Bestäubung unserer Nutz- und Wildpflanzen ist mittlerweile längst nicht mehr gewährleistet. Mit der „Bienenkiste“ stellt Mellifera e.V. ein modernisiertes traditionelles Konzept vor, das die Möglichkeit bietet, mit einem Minimum an Aufwand und Kosten selbst Bienen zu halten und so für eine gute Bestäubung der Obstbäume zu sorgen und nebenbei Honig zu ernten.",
+				"title": "Die Bienenkiste: Eine Möglichkeit, selbst für die Bestäubung seiner Obstbäume zu sorgen? "
+			}, {
+				"date": "Sonntag 12:30",
+				"referent": "Daniel Wicklein",
+				"image": "/assets/wicklein.png",
+				"title": "Fragestunde: Bienen in der Stadt"
+			}, {
+				"date": "Sonntag 14:30",
+				"referent": "Werner Merkel ",
+				"image": "http://lab.min.uni-hamburg.de/store/europom/slides/merkel.png","summary":"Wenn wir über Kiwis sprechen, geht es meistens um die großfruchtigen, grünfleischigen Sorten des chinesischen Strahlengriffels aus dem Supermarkt, die Actinidia deliciosa/chinensis. Darüber hinaus stehen jedoch mindestens sieben weitere delikate und auch farbige Arten zur Verfügung, welche unser Fruchtangebot in Bio-Qualität bereichern können. Der Vortrag beschäftigt sich mit Missverständnissen im Kiwianbau, nennt alle erforderlichen Voraussetzungen in Boden- und Sortenauswahl und erläutert die fachgerechte Kultur zur Obstproduktion im Erwerbsobstanbau sowie im Hausgarten.\n\nSortenbestimmung vor Ort sowie Benennung seriöser Bezugsquellen runden diesen Vortrag ab.",
+				"title": "Der Kiwi-Anbau nördlich der Alpen",
+				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/kiwianbau.pdf","thumbs":50
+			}, {
+				"date": "Sonntag 15:15",
+				"referent": "Dr. Klaus-Jürgen Paulsen, Malte Reichert …",
+				"image": "",
+				"title": "Nordeutsche Obstwiesen: Kennenlernen und Mitmachen "
+			}
+		]
+	}
+]
