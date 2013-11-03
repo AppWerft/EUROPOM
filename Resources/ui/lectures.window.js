@@ -3,8 +3,10 @@ Array.prototype.isArray = true;
 exports.create = function() {
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
+		navBarHidden : true,
 		backgroundImage : '/assets/bg.png',
-		barColor : '#060',title:'Apfelfachvorträge'
+		barColor : '#060',
+		title : 'Apfelfachvorträge'
 	});
 	self.listView = Ti.UI.createListView({
 		bottom : '20dp',
@@ -30,7 +32,6 @@ exports.create = function() {
 		bottom : 0,
 		zIndex : 99999
 	}));
-
 	setTimeout(function() {
 		self.add(self.listView);
 		require('vendor/cachedxhr').get({
@@ -38,11 +39,9 @@ exports.create = function() {
 			defaultjson : 'model/events.json',
 			onload : function(_events) {
 				var sections = [];
-				console.log(_events.length);
 				for (var t = 0; t < _events.length; t++) {
 					var data = [];
 					var themetitle = _events[t].theme;
-					
 					var sessions = _events[t].sessions;
 					if (sessions && sessions.isArray)
 						for (var a = 0; a < sessions.length; a++) {
@@ -72,7 +71,6 @@ exports.create = function() {
 					});
 					self.listView.setSections(sections);
 				}
-
 			}
 		});
 	}, 40);

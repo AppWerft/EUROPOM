@@ -1,16 +1,154 @@
 Logfile initialized
 [INFO] logfile = /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build.log
-[DEBUG] /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/builder.py install EuroPom /Applications/android-sdk-mac_x86 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom de.appwerft.europom 11
+[DEBUG] /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/builder.py distribute EuroPom /Applications/android-sdk-mac_x86 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom de.appwerft.europom /Users/rainerschleevoigt/.android.keystore *MHpsNH googlekey /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom
 [INFO] Titanium SDK version: 3.1.2 (08/14/13 12:45 5ceaff8)
-[DEBUG] Waiting for device to be ready ...
-[TRACE] adb devices returned 0 devices/emulators
-[TRACE] adb devices returned 0 devices/emulators
-[TRACE] adb devices returned 0 devices/emulators
-[TRACE] adb devices returned 0 devices/emulators
-[TRACE] adb devices returned 0 devices/emulators
-[TRACE] adb devices returned 0 devices/emulators
-[TRACE] adb devices returned 0 devices/emulators
-[TRACE] adb devices returned 0 devices/emulators
-[TRACE] adb devices returned 0 devices/emulators
-[TRACE] adb devices returned 0 devices/emulators
-[ERROR] Timed out waiting for device to be ready, you may try reconnecting the USB cable
+[INFO] Copying CommonJS modules...
+[INFO] Copying project resources..
+[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/android/512.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/512.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/android/appicon.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/appicon.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/android/default.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/default.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/android/icon/mapmarker.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/icon/mapmarker.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/android/icon/plant.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/icon/plant.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/android/icon/pvicon.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/icon/pvicon.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/android/icon/treeicon.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/icon/treeicon.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/android/icon/user.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/icon/user.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/android/ui/TEMPLATES.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/TEMPLATES.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/app.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/app.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/apples.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/apples.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/bg.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/bg.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/bigbg.jpg => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/bigbg.jpg
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/bosch.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/bosch.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/bottomlogo.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/bottomlogo.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/brandt.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/brandt.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/dummy.jpg => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/dummy.jpg
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/goergens.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/goergens.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/leer.jpg => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/leer.jpg
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/leer.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/leer.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/player.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/player.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/pmlv.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/pmlv.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/schirarend.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/schirarend.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/start.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/start.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/washof.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/washof.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/assets/wicklein.png => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/assets/wicklein.png
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/fonts/SIL Open Font License.txt => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/fonts/SIL Open Font License.txt
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/fonts/Vollkorn-Bold.ttf => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/fonts/Vollkorn-Bold.ttf
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/fonts/Vollkorn-BoldItalic.ttf => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/fonts/Vollkorn-BoldItalic.ttf
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/fonts/Vollkorn-Italic.ttf => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/fonts/Vollkorn-Italic.ttf
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/fonts/Vollkorn-Regular.ttf => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/fonts/Vollkorn-Regular.ttf
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/model/events.json => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/model/events.json
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/model/pommes.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/model/pommes.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/model/pommes.json => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/model/pommes.json
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/model/sorten.json => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/model/sorten.json
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/apfelDB.window.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/apfelDB.window.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/apfelfeed.window.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/apfelfeed.window.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/audioplayer.widget.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/audioplayer.widget.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/cachedimage.widget.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/cachedimage.widget.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/detail.window.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/detail.window.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/gmap.widget.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/gmap.widget.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/gmap.window.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/gmap.window.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/kataster.window.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/kataster.window.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/lectures.detail.window.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/lectures.detail.window.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/lectures.window.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/lectures.window.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/progress.widget.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/progress.widget.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/remotepdfviewer.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/remotepdfviewer.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/tabgroup.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/tabgroup.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/ui/web.window.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/ui/web.window.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/cachedxhr.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/vendor/cachedxhr.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/google.oauth.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/vendor/google.oauth.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/multisocial.api.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/vendor/multisocial.api.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/oauth.adapter.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/vendor/oauth.adapter.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/oauth.lib.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/vendor/oauth.lib.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/ti.kenburns.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/vendor/ti.kenburns.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/video.widget.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/vendor/video.widget.js
+[TRACE] COPYING CREATED FILE: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/XMLTools.js => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/vendor/XMLTools.js
+[DEBUG] LiveView not enabled
+[TRACE] Generating Java Classes
+[DEBUG] Processing Android resource drawables
+[DEBUG] app stylesheet => /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/ApplicationStylesheet.java
+[DEBUG] copying app icon: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/appicon.png
+[DEBUG] generating theme.xml
+[DEBUG] found splash screen at /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/default.png
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/ApplicationStylesheet.java to javac build list
+[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/AssetCryptImpl.java to javac build list
+[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomActivity.java to javac build list
+[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomAppInfo.java to javac build list
+[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomApplication.java to javac build list
+[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/Manifest.java to javac build list
+[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/R.java to javac build list
+[DEBUG] Building Java Sources: "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/ApplicationStylesheet.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/AssetCryptImpl.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomActivity.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomAppInfo.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomApplication.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/Manifest.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/R.java"
+[INFO] Compiling Android Resources... This could take some time
+[DEBUG] Android classes.dex built
+[DEBUG] creating unsigned apk: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/assets/apples.png
+[DEBUG] from resource zip => assets/Resources/assets/bg.png
+[DEBUG] from resource zip => assets/Resources/assets/bigbg.jpg
+[DEBUG] from resource zip => assets/Resources/assets/bosch.png
+[DEBUG] from resource zip => assets/Resources/assets/bottomlogo.png
+[DEBUG] from resource zip => assets/Resources/assets/brandt.png
+[DEBUG] from resource zip => assets/Resources/assets/dummy.jpg
+[DEBUG] from resource zip => assets/Resources/assets/goergens.png
+[DEBUG] from resource zip => assets/Resources/assets/leer.jpg
+[DEBUG] from resource zip => assets/Resources/assets/leer.png
+[DEBUG] from resource zip => assets/Resources/assets/player.png
+[DEBUG] from resource zip => assets/Resources/assets/pmlv.png
+[DEBUG] from resource zip => assets/Resources/assets/schirarend.png
+[DEBUG] from resource zip => assets/Resources/assets/start.png
+[DEBUG] from resource zip => assets/Resources/assets/washof.png
+[DEBUG] from resource zip => assets/Resources/assets/wicklein.png
+[DEBUG] from resource zip => assets/Resources/fonts/SIL Open Font License.txt
+[DEBUG] from resource zip => assets/Resources/fonts/Vollkorn-Bold.ttf
+[DEBUG] from resource zip => assets/Resources/fonts/Vollkorn-BoldItalic.ttf
+[DEBUG] from resource zip => assets/Resources/fonts/Vollkorn-Italic.ttf
+[DEBUG] from resource zip => assets/Resources/fonts/Vollkorn-Regular.ttf
+[DEBUG] from resource zip => assets/Resources/icon/mapmarker.png
+[DEBUG] from resource zip => assets/Resources/icon/plant.png
+[DEBUG] from resource zip => assets/Resources/icon/pvicon.png
+[DEBUG] from resource zip => assets/Resources/icon/treeicon.png
+[DEBUG] from resource zip => assets/Resources/icon/user.png
+[DEBUG] from resource zip => assets/Resources/model/events.json
+[DEBUG] from resource zip => assets/Resources/model/pommes.json
+[DEBUG] from resource zip => assets/Resources/model/sorten.json
+[DEBUG] from resource zip => assets/Resources/512.png
+[DEBUG] from resource zip => assets/Resources/appicon.png
+[DEBUG] from resource zip => assets/Resources/default.png
+[DEBUG] from resource zip => assets/app.json
+[DEBUG] from resource zip => assets/index.json
+[DEBUG] from resource zip => res/drawable/appicon.png
+[DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/drawable/btn_check_buttonless_on_64.png
+[DEBUG] from resource zip => res/drawable/btn_more_64.png
+[DEBUG] from resource zip => res/drawable/disclosure_64.png
+[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
+[DEBUG] from resource zip => res/layout/titanium_ui_list_header_or_footer.xml
+[DEBUG] from resource zip => res/layout/titanium_ui_list_item.xml
+[DEBUG] from resource zip => AndroidManifest.xml
+[DEBUG] from resource zip => resources.arsc
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.js
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.min.js
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/thirdparty.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/thirdparty.jar => org/apache/mime4j-NOTICE.txt
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/build.properties
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/background.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_64.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_64.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG] installing native lib: /Library/Application Support/Titanium/modules/android/ti.map/2.1.2/libs/armeabi/libti.map.so
+[DEBUG] installing native lib: /Library/Application Support/Titanium/modules/android/ti.map/2.1.2/libs/armeabi-v7a/libti.map.so
+[DEBUG] installing native lib: /Library/Application Support/Titanium/modules/android/ti.map/2.1.2/libs/x86/libti.map.so
+[DEBUG] installing native SDK libs

@@ -62,6 +62,12 @@ Pommes.prototype.getAllEvents = function(_options) {
 			max : 1
 		});
 	}
+	if (!Ti.Network.online) {
+		Ti.Android && Ti.Android.createNotification({
+			message : 'Netz nicht da, nehme alte Daten'
+		}).show();
+		return;
+	}
 	var events = JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'model', 'events.json').read().text);
 	var xhr = Ti.Network.createHTTPClient({
 		ondatastream : function(_e) {
@@ -71,9 +77,15 @@ Pommes.prototype.getAllEvents = function(_options) {
 		onload : function() {
 			if (progressIndicator)
 				progressIndicator.hide();
+			Ti.Android && Ti.Android.createNotification({
+				message : 'Neue Daten aus dem Netz aktualisiert'
+			}).show();
 			_options.onload && _options.onload(JSON.parse(this.responseText));
 		},
 		onerror : function() {
+			Ti.Android && Ti.Android.createNotification({
+				message : 'Netz nicht da, nehme alte Daten'
+			}).show();
 			if (progressIndicator)
 				progressIndicator.hide();
 			_options.onload && _options.onload(events);
@@ -86,30 +98,30 @@ Pommes.prototype.getAllEvents = function(_options) {
 	return events;
 };
 /*
-Pommes.prototype.getFeed = function(_options) {
-	var md5;
-	if (Ti.App.Properties.hasProperty('ITEMS')) {
-		md5 = Ti.Utils.md5HexDigest(Ti.App.Properties.getString('ITEMS'));
-		_options.onload && _options.onload(JSON.parse(Ti.App.Properties.getString('ITEMS')));
-	}
-	var url = 'http://pomologen-verein.de/startseite/rss.xml';
-	var xhr = Ti.Network.createHTTPClient({
-		onload : function() {
-			var XMLTools = require("vendor/XMLTools");
-			var xml = new XMLTools(this.responseText);
-			var feed = xml.toObject();
-			var items = feed.channel.item;
-			Ti.App.Properties.setString('ITEMS', JSON.stringify(items));
-			if (!md5 || md5 != Ti.Utils.md5HexDigest(JSON.stringify(items)))
-				_options.onload && _options.onload(items);
-		},
-		onerror : function(e) {
-			console.log('Error: ' + e.error);
-		}
-	});
-	xhr.open('GET', url, true);
-	xhr.send();
-	console.log('Info: start feed xhr');
-};
-*/
+ Pommes.prototype.getFeed = function(_options) {
+ var md5;
+ if (Ti.App.Properties.hasProperty('ITEMS')) {
+ md5 = Ti.Utils.md5HexDigest(Ti.App.Properties.getString('ITEMS'));
+ _options.onload && _options.onload(JSON.parse(Ti.App.Properties.getString('ITEMS')));
+ }
+ var url = 'http://pomologen-verein.de/startseite/rss.xml';
+ var xhr = Ti.Network.createHTTPClient({
+ onload : function() {
+ var XMLTools = require("vendor/XMLTools");
+ var xml = new XMLTools(this.responseText);
+ var feed = xml.toObject();
+ var items = feed.channel.item;
+ Ti.App.Properties.setString('ITEMS', JSON.stringify(items));
+ if (!md5 || md5 != Ti.Utils.md5HexDigest(JSON.stringify(items)))
+ _options.onload && _options.onload(items);
+ },
+ onerror : function(e) {
+ console.log('Error: ' + e.error);
+ }
+ });
+ xhr.open('GET', url, true);
+ xhr.send();
+ console.log('Info: start feed xhr');
+ };
+ */
 module.exports = Pommes;

@@ -1,3 +1,4 @@
+android/ATTR_MINIFY=true
 android/ATTR_PROJECT_NAME=Europom
 android/abi=armeabi
 android/distribute_path=/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom
@@ -7,3 +8,10 @@ android/keystore_path=/Users/rainerschleevoigt/.android.keystore
 android/recent_output=/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom
 android/sdk_version=Google APIs (Android 2.3.1)
 eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=Europom
+iosLaunchConfigurationAttributes/appid=de.appwerft.europom
+iosLaunchConfigurationAttributes/certificate=Rainer Schleevoigt
+iosLaunchConfigurationAttributes/keychain=
+iosLaunchConfigurationAttributes/sdk_version=7.0
+iosLaunchConfigurationAttributes/uuid=236186B8-1343-4A3F-AF52-2BFEDF72440E

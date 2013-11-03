@@ -1,0 +1,1 @@
+(function(){var e=require("model/pommes");Ti.App.PommesModel=new e,Ti.App.GMap=Ti.Android?require("ti.map"):Ti.Map,console.log("Info: Maps module included. ==================================="),require("ui/tabgroup").create().open()})();

@@ -2,6 +2,8 @@ exports.create = function() {
 	Ti.UI.backgroundImage = '/assets/bg.png';
 	var tabGroup = Titanium.UI.createTabGroup({
 		backgroundColor : 'white',
+		navBarHidden : true,
+		fullscreen : true,
 		exitOnClose : true
 	});
 	var tab1 = Titanium.UI.createTab({
@@ -24,15 +26,8 @@ exports.create = function() {
 		icon : 'icon/pvicon.png',
 		window : require('ui/apfelfeed.window').create()
 	});
-	var tab5 = Titanium.UI.createTab({
-		title : 'Baumkataster',
-		icon : 'icon/treeicon.png',
-		window : require('ui/kataster.window').create()
-	});
 	tabGroup.addTab(tab1);
 	tabGroup.addTab(tab3);
-	if (Ti.Android)
-		tabGroup.addTab(tab5);
 	tabGroup.addTab(tab4);
 	tabGroup.addTab(tab2);
 	return tabGroup;

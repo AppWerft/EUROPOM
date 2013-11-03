@@ -18,7 +18,7 @@
 	NSMutableDictionary * _property = [[NSMutableDictionary alloc] init];
 	
 	[_property setObject:[TiUtils stringValue:@"system"] forKey:@"ti.ui.defaultunit"];
-	[_property setObject:[TiUtils stringValue:@"test"] forKey:@"ti.deploytype"];
+	[_property setObject:[TiUtils stringValue:@"production"] forKey:@"ti.deploytype"];
 	return _property;
 }
 

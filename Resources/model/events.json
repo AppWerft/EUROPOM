@@ -46,6 +46,7 @@
 				"date": "Samstag 15:10",
 				"referent": "Hans-Thomas Bosch",
 				"image": "http://lab.min.uni-hamburg.de/store/europom/slides/allgaeuer.png",
+				"audio" : "http://lab.min.uni-hamburg.de/store/europom/audio/allgaeuer.m4a",
 				"summary":"Im bayerischen Allgäu wurden zwischen 2009 und 2013 die Kernobstsorten in kleinbäuerlich geprägten Obstgärten erfasst. 257 Apfel- und Birnensorten ließen sich sicher bestimmen, außerdem entstand an der Versuchsstation der Hochschule Weihenstephan-Triesdorf ein Sortengarten mit 84 Apfel- und 84 Birnensorten.\n\nIn Regionen, in denen der ländliche, durch extensive Bewirtschaftung geprägte traditionelle Hochstamm- obstbau nicht verdrängt wurde, ist ein beachtliches Reservoir an seltenen und erhaltungswürdigen alten Sorten vorzufinden. Wie lange im Allgäu bereits Obstbau betrieben wird, zeigt der etwa 400jährige Birnbaum mit beachtlichen 430 cm Stammumfang. Auch deuten die nahezu 100 Varietäten, die auch nach eingehender pomologischer Bearbeitung nicht bestimmt werden konnten, auf eine lange Obstbautradition hin. Die Weitergabe von Sorten über große Distanzen dürfte bereits so lange Tradition haben wie der Obstbau selbst. Im Allgäu gibt es beispielsweise Sorten wie „Rotes Seidenhemd“, „Groninger Krone“ oder „Berliner“, die man eher aus dem Raum Bremen kennt. Der „Doppelte Prinzenapfel“ ist im Oberallgäu eine der häufigsten Sorten überhaupt, sein Entstehungs- und Verbreitungsgebiet liegt aber in Norddeutschland. Er hat sich mittlerweile bestens an das vorherrschende raue Voralpenklima angepasst und ist bis in Höhenlagen von 1000 m nachzuweisen.",
 			"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/allgaeu.pdf",
 			"thumbs" : 38,
@@ -54,11 +55,13 @@
 				"date": "Samstag 15:40",
 				"referent": "Dirk Müller / Anja Abdank",
 				"image": "http://lab.min.uni-hamburg.de/store/europom/slides/mueller.jpg",
+				"audio" : "http://lab.min.uni-hamburg.de/store/europom/audio/onlinemeckpomm.m4a",
 				"summary":"Zur gegenseitigen Unterstützung und zum regelmäßigen Erfahrungsaustausch wurde 2009 das „Netzwerk Streuobst MV“ ins Leben gerufen. Als einer der Initiatoren startete der Förderverein Bützower Land e.V. das erste Projekt, den „Streuobst-Kreativ-Kalender Mecklenburg-Vorpommern“. Im Herbst 2011 folgte die Wanderausstellung „Streuobst in Mecklenburg-Vorpommern“ des NABU und 2012 die „Interaktive Streuobsterfassung in Mecklenburg-Vorpommern“: Ausgehend von Ergebnissen einer landesweit durchgeführten Streuobsterfassung in den Jahren 1993-1995 entstand unter der Regie des FV Bützower Land e.V. ein Internetportal, das es jedermann ermöglicht, Streuobstvorkommen einzugeben und damit für die gemeinsame Arbeit zugänglich zu machen. Es ist eine Erweiterung des bewährten Internetportals der Floristischen Datenbanken Mecklenburg-Vorpommern, die von ehrenamtlichen Botanikern bereits seit Jahren zur Erfassung von Pflanzenfunden genutzt wird. Das Portal ist unter http://streuobst.flora-mv.de erreichbar.",
 				"title": "Streuobst-Online-Erfassung in Mecklenburg-Vorpommern"
 			}, {
 				"date": "Samstag 16:10",
 				"referent": "Sabine Washof",
+				"audio" : "http://lab.min.uni-hamburg.de/store/europom/audio/streuobstdb.m4a",
 				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/streukataster.pdf",
 				"thumbs" : 55,
 				"image": "/assets/washof.png","summary":"Der BUND Niedersachsen setzt sich für den Schutz der letzten verbliebenen Streuobstwiesen ein. Dafür wurde das Projekt „Streuobstwiesenkataster Niedersachsen“ ins Leben gerufen. Auf www.streuobstwiesen-niedersachsen.de werden Fragen wie „Wo kann ich Saft von Streuobst-Bäumen kaufen?“, „Wann findet das nächste Obstblütenfest in meiner Nähe statt?“ oder „Wächst in Niedersachen noch irgendwo der Pfannkuchenapfel?“ beantwortet.\n\n Das Projekt war zunächst auf vier Modelllandkreise beschränkt. Ziel ist es, niedersachsenweit Informationen zu Streuobstwiesen, Veranstaltungen und Streuobstwiesenprodukten in einer Datenbank zu sammeln und diese der Öffentlichkeit zur Verfügung zu stellen. Die Informationsplattform ist verbandsübergreifend und lebt von gegenseitiger Unterstützung aller Akteure. Das BUND-Projekt wird unterstützt von einem Fachbeirat, in dem Vertreter wichtiger Institutionen zusammen kommen. Aufgabe des Fachbeirates ist es, bis zum Projektende eine verbindliche und stabile Trägerschaft für die Weiterführung der Plattform gefunden zu haben, z. B. in einem eigenen e.V. oder durch eine Kooperationsvereinbarung.\n\nÜber das entstehende Netzwerk der Plattform sollen zusätzlich alle Gruppen und Initiativen miteinander ins Gespräch kommen, die sich schon heute für den Erhalt von Streuobstwiesen einsetzen.",
@@ -66,11 +69,20 @@
 			}, {
 				"date": "Samstag 16:50",
 				"referent": "Dr. Gisela Bertram",
-				"image":"http://lab.min.uni-hamburg.de/store/europom/slides/wilhelmsburg.jpg",
+				"image":"http://lab.min.uni-hamburg.de/store/europom/slides/wilhelmsburg.jpg",	"audio" : "http://lab.min.uni-hamburg.de/store/europom/audio/altenwerder.m4a",
+			
 				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/wilhelmsburg.pdf",
 				"thumbs" : 55,
 				"summary":"Die Stiftung Ausgleich Altenwerder hat die Aufgabe, im Naturraum der Elbe in Hamburg Flächen zu erhalten und naturschutzfachlich aufzuwerten ist. Auf der Elbinsel Wilhelmsburg hat die Stiftung die Obstweide am Jakobsberg erworben. Der Erhalt und die Pflege der Obstbäume sind ebenso Ziele woe die Erhöhung der Sortenvielfalt. Der Steinkauz ist eine Zielart für unsere Arbeit","title": "Jakobsberg: Eine Obstweide auf der Elbinsel Wilhelmsburg in Hamburg."
-			}
+			}, {
+				"date": "Samstag 17:30",
+				"referent": "Heinrich Kautzky",
+				"slides": "http://lab.min.uni-hamburg.de/store/europom/slides/heinrichkautzky.pdf",
+				"thumbs" : 39,
+				"image":"http://nms-einfeld.de/images/content/see_und_mehr/alte_obstwiese/sortenbestimmung/120902_034.jpg",	
+				"audio" : "http://lab.min.uni-hamburg.de/store/europom/audio/neumuenster.m4a",
+				"title":"Alte Obstwiese Neumünster Kieler Straße 515",
+				"summary":"Am Stadtrand von Neumünster entstand Anfang des 20. Jahrhunderts ein landwirtschaftlicher Betrieb mit 500 Obstbäumen und vielem Gemüse. Seit 1957 lag die Fläche brach. Es entstand ein „Apfelwäldchen“ mit 60 Bäumen genetischer Unikate. Die Wiese wird jetzt vom Arbeitskreis Alte Obstwiese gepflegt. Eine Auswahl der alten Obstsorten wird erstmalig auf der EUROPOM präsentiert."}
 		]
 	}, {
 		"theme": "Sortenerhaltung",
@@ -79,36 +91,43 @@
 				"date": "Freitag 10:15",
 				"referent": "Dr. Monika Höfer","summary":"Das Institut für Züchtungsforschung an gartenbaulichen Kulturen und Obst des Julius Kühn-Institutes (JKI) in Dresden-Pillnitz hat die Aufgabe, obstgenetische Ressourcen zu erhalten und neue Obstsorten bei Apfel, Kirsche und Erdbeere zu züchten. Schwerpunkte der Züchtungsarbeiten sind neben der Erhöhung der Fruchtqualität vor allem die Verbesserung der Resistenz neuer Obstsorten gegenüber bedeutenden Schaderregern und abiotischen Stressfaktoren. Dabei kommt der Suche nach geeigneten genetischen Ressourcen in den mit Kulturarten verwandten Wildarten eine herausragende Bedeutung zu.\n\nDer Kaukasus mit seinen unermesslichen Wäldern, die einzig und allein aus den wilden Vorfahren des Obstes bestehen (Vavilov, 1930), gilt als eines der reichsten Diversitätszentren von wilden Obstarten der Erde: Über 260 Arten von 37 Gattungen wurden nachgewiesen. Unter diesem Gesichtspunkt erfolgten in den Jahren 2011 und 2012 zwei Sammelexpeditionen in den Nordkaukasus, an denen sowohl Wissenschaftler aus dem JKI als auch des Nikolai I. Vavilov Forschungsinstitutes für Pflanzenbau in St. Petersburg und Maikop teilnahmen. Das gesammelte Material wird gegenwärtig evaluiert und auf das Vorkommen wertgebender Eigenschaften geprüft, um neues Ausgangsmaterial für künftige Züchtungsarbeiten bereitzustellen.",
 				"image": "http://zuhause3.dstatic.de/img/photos/full/5/8/dr-monika-hoefer-jahrgang-1960-ist-kuratorin-der-obst-genbank-des-julius-kuehn-instituts-institut.jpg",
-				"title": "Der Kaukasus - ein Genzentrum obstgenetischer Ressourcen"
+				"title": "Der Kaukasus - ein Genzentrum obstgenetischer Ressourcen","slides":"http://www.apfeltage.info/presse/2013/vortraege/EUROPOM%202013-02%20Kaukasus.pdf"
 			}, {
 				"date": "Freitag 10:50",
 				"referent": "Frank Singhof ",
 				"image": "",
 				"summary":"Obstkundliche Werke und Periodika bilden einen Schwerpunkt der Sammlung Gartenbaubücherei. Teile des Bestandes stammen noch aus dem Besitz des Dt. Pomologenvereins von 1860. Vorgestellt wird ein Querschnitt der pomologischen Literatur, deren Bezeichnung auf Johann Knoops 1758 veröffentlichte „Pomologia“ zurückzuführen ist. Beschrieben wird ferner die Friesen’sche Sammlung von Obstsortendarstellungen und –beschreibungen. Darüber hinaus bietet die Bücherei eine Reihe von Recherchemöglichkeiten zum Thema Obstbau/ Obstkunde in Dokumentationskarteien vor Ort und nicht zuletzt im Internet (z.B. Pomologische Bibliothek).",
 				"title": "Obstkundliche Literatur in der Bibliothek des dt. Gartenbaus",
+				"slides": "http://www.apfeltage.info/presse/2013/vortraege/EUROPOM%202013-03_obstkundliche%20Literatur.pdf",
 				"slides" : "http://lab.min.uni-hamburg.de/store/europom/slides/obstliteratur.pdf",
 				"thumbs" : 17  
 			}, {
 				"date": "Freitag 11:20",
 				"referent": "Henryk Flachowsky, Dr. Monika Höfer",
+				"slides":"http://www.apfeltage.info/presse/2013/vortraege/EUROPOM%202013-04_DGO.pdf",
 				"image": "http://zuhause3.dstatic.de/img/photos/full/5/8/dr-monika-hoefer-jahrgang-1960-ist-kuratorin-der-obst-genbank-des-julius-kuehn-instituts-institut.jpg",
 				"summary":"Seit Beginn des letzten Jahrhunderts werden in Deutschland obstgenetische Ressourcen in unterschiedlichsten Sammlungen erhalten. Sie sind ein Stück Kulturgeschichte und bilden die genetische Basis für die Züchtung neuer Obstsorten. Mit ihnen wird es möglich sein, umweltfreundlich hohe Erträge von qualitativ hochwertigen Früchten zu produzieren. Doch die Verteilung der genetischen Ressourcen ist schwierig: Werden einzelne Genotypen in vielen Sammlungen erhalten, kommen andere nur noch selten oder gar nicht vor. Dies führt langfristig zu einem schleichenden Verlust.\n\nUm dieses Risiko zu minimieren, wurde mit der Deutschen Genbank Obst (DGO) ein dezentrales Erhaltungsnetzwerk gegründet. Die DGO besteht aus einzelnen obstartenspezifischen Netzwerken, in denen sammlungshaltende Partner organisiert sind. Partner können Bundes- und Landeseinrichtungen, Landkreise, Kommunen sowie Vereine und andere nicht staatliche Organisationen sein, die sich verpflichten, ihre Sammlungen zu erhalten, zu evaluieren und zu dokumentieren. Darüber hinaus verpflichten sie sich auch zur Abgabe von Pflanzenmaterial. Die Koordinierungsstelle der DGO befindet sich am Institut für Züchtungsforschung an gartenbaulichen Kulturen und Obst des Julius Kühn-Instituts (JKI) in Dresden. Die Dokumentation der zu erhaltenden Sorten erfolgt über die unter http://www.deutsche-genbank-obst.jki.bund.de/ zu erreichende Internetseite.",
 				"title": "Die Deutsche Genbank Obst (DGO) - ein Netzwerk zur Erhaltung heimischer obstgenetischer Ressourcen"
 			}, {
-				"date": "Freitag 12:00",
+				"date": "Freitag 12:00",      
 				"summary":"Hans-Joachim Bannier pflanzte in seinem Obst-Arboretum über 300 verschiedene – alte und moderne – Apfelsorten. In seinem Vortrag berichtet er von seinen Erfahrungen und über die Einflussnahme der chemischen Industrie auf den modernen Obstanbau.\n\nDie meisten Apfelsorten werden für den Erwerbsobstbau gezüchtet. Als Nebenprodukt entstehen Varianten für den Streuobst- und Liebhaberanbau. Sie überschwemmen vielerorts bereits das Baumschulangebot. Untersucht man diese Sorten, wird deutlich, dass nahezu sämtliche Züchtungen der letzten 80 Jahre von den fünf Klassikern Golden Delicious, Cox Orange, Jonathan, McIntosh und Red Delicious abstammen. Da jedoch ausgerechnet diese Sorten stark krankheitsanfällig sind, hat die genetische Verengung dramatische Folgen für die Vitalität des modernen Obstbaus. Damit diese krankheitsanfälligen Sorten dennoch erfolgreich angebaut werden können, berichten Fachzeitschriften hauptsächlich über Pflanzenschutz und die Industrie bringt eine Vielzahl von Fungiziden auf den Markt.\n\nDer „Blick zurück“ auf die sogenannten alten Sorten ist daher keineswegs nur ein romantischer Nostalgie- Reflex, sondern eine Voraussetzung, um die tiefgreifende ökologische Krise des gegenwärtigen Obstbaus zu verstehen und Wege aus dieser Krise zu finden. Deutlich werden die Probleme moderner Sorten erst, wenn sie in Streuobstwiesen oder Hausgärten – unter Verzicht auf den Einsatz von chemischen Pflanzenschutzmitteln –gepflanzt werden.",
 				"referent": "Hans-Joachim Bannier",
-				"image": "http://www.nw-news.de/_em_daten/_nw/2009/09/02/090902_2007_bi1.jpg",
-				"title": "Apfelsorten im modernen Obstbau"
+				"slides":"http://www.apfeltage.info/presse/2013/vortraege/EUROPOM%202013-05_Genetische-Verarmung-u.Biodiversit%C3%A4t-im-Obstbau.pdf",
+				"image": "http://lab.min.uni-hamburg.de/store/europom/slides/bannier.png",
+				"title": "Apfelsorten im modernen Obstbau",
+			    "audio" :"http://lab.min.uni-hamburg.de/store/europom/audio/bannier.mp3",
+			  	"video" :"http://lab.min.uni-hamburg.de/store/europom/video/bannier.mp4"
 			}, {
 				"date": "Freitag 13:30",
 				"summary":"Praxisnahe Forschung für den Obstbau stellt eine der drei Hauptaufgaben des ESTEBURG Obstbauzentrum Jork dar: In Hunderten von Versuchen werden jedes Jahr diverse Obstsorten auf den angeschlossenen Versuchsbetrieben bearbeitet. Neben Anbautechniken und Pflanzsystemen beschäftigen wir uns mit Schädlingsbefall und Krankheiten sowie mit Erntesystemen und Lagerungstechnik. Wir beraten zirka 1.400 Obstbaubetriebe in Norddeutschland zu Kulturführung, Pflanzenschutz, Düngung, Ernteverfahren und Lagerung und sprechen Sortenempfehlungen aus. Auch beantworten wir betriebswirtschaftliche und sozioökonomische Fragen und informieren über die Anforderungen des ökologischen Anbaus. Wir veranstalten Vorernteführungen, winterliche Sprechtage und ca. 140 Pflanzenschutzbegehungen pro Saison. Eine zentrale Informationsveranstaltung für Obstbauern ist die jährlich im Februar stattfindende Fachmesse „Norddeutsche Obstbautage“ in Jork.\n\nNur gut ausgebildete und informierte Obstbauern haben dauerhaft Erfolg. Daher ist die Aus- und Weiterbildung unser dritter Aufgabenschwerpunkt. Wir bilden seit vielen Jahren Gärtner der Fachrichtung Obstbau, Berater, Obstbaumeister und landwirtschaft-technische Assistenten aus. Zudem lässt sich an der ESTEBURG berufsbegleitend die integrierte Betriebsleiterausbildung zum staatlich geprüften Wirtschafter einschlagen. Des Weiteren werden Seminare und Qualifizierungsmaßnahmen im Rahmen der Erwachsenenbildung angeboten.",
 				"referent": "Dr. Matthias Görgens",
 				"image": "/assets/goergens.png",
+				"slides":"http://www.apfeltage.info/presse/2013/vortraege/EUROPOM%202013-06%20Esteburg.pdf",
 				"title": "ESTEBURG - Obstbauzentrum Jork "
 			}, {
 				"date": "Freitag 14:10",
 				"referent": "Jan Bade,Dr. Annette Braun-Lüllemann",
+				"slides" : "http://www.apfeltage.info/presse/2013/vortraege/EUROPOM%202013-07_PV-Erhaltungsnetzwerk.pdf",
 				"summary" :"Um dem rasanten Sortenschwund der letzten Jahrzehnte Einhalt zu gebieten und die bereits existierenden Initiativen und Aktivitäten zur Sortenerhaltung zu koordinieren, wurde das Erhalternetzwerk Obstsortenvielfalt des Pomologen-Vereins gegründet. Ziel ist eine langfristige und dezentrale Erhaltung aller aktuell verfügbaren alten Obstsorten in Deutschland. Hierfür werden Sammlungen von Mitgliedern in einer gemeinsamen Datenbank erfasst und die Bäume von Experten des Vereins auf ihre Sortenechtheit überprüft. Diese zertifizierten Sorten können in Form von Edelreisermaterial weitergegeben werden. Zusätzlich erfolgen Neuanpflanzungen in bestehenden und neu entstehenden Sammlungen. Das Hauptaugenmerk liegt neben den sehr seltenen auch auf bisher namentlich unbekannten Obstsorten. Das Projekt wird aktuell von der Heidehof Stiftung Stuttgart gefördert.",
 				"title": "Erhalternetzwerk Obstsortenvielfalt des Pomologen-Vereins e.V."
 			}

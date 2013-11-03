@@ -1,0 +1,1 @@
+exports.create=function(){var e=Ti.UI.createView({bottom:0,height:"100dp"});return e.add(Ti.UI.createView({backgroundColor:"black",opacity:.7})),e.progress=Ti.UI.createProgressBar({width:"90%",min:0,max:1}),e.add(e.progress),e.progress.show(),e};

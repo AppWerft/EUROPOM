@@ -4,8 +4,9 @@ const MINIBASEURL = 'http://www.apfelsorten.ch/images/apfelsorten/thumbnails/';
 exports.create = function(_event) {
 	var event = JSON.parse(_event);
 	var self = Ti.UI.createWindow({
-		fullscreen : false,
+		fullscreen : true,
 		title : event.title,
+		navBarHidden : true,
 		backgroundColor : 'white',
 		barColor : '#040'
 	});
@@ -130,6 +131,6 @@ exports.create = function(_event) {
 
 		};
 	}, 10);
-	
+
 	return self;
 };
