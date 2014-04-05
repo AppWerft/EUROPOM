@@ -1,6 +1,5 @@
 exports.create = function() {
 	var self = Ti.UI.createWindow({
-		fullscreen : true,
 		backgroundImage : '/assets/bg.png'
 	});
 	const START = 0.003;
@@ -28,6 +27,8 @@ exports.create = function() {
 		console.log('Info: map complete');
 		self.gmap.selectAnnotation(linne);
 	});
-	self.add(self.gmap);
+	self.addEventListener('open', function() {
+		self.add(self.gmap);
+	});
 	return self;
 };

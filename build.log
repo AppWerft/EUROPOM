@@ -1,7 +1,12 @@
 Logfile initialized
 [INFO] logfile = /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build.log
-[DEBUG] /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/builder.py distribute EuroPom /Applications/android-sdk-mac_x86 /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom de.appwerft.europom /Users/rainerschleevoigt/.android.keystore *MHpsNH googlekey /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom
+[DEBUG] /Library/Application Support/Titanium/mobilesdk/osx/3.1.2.GA/android/builder.py install EuroPom /Users/rainerschleevoigt/android-sdk /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom de.appwerft.europom 1
 [INFO] Titanium SDK version: 3.1.2 (08/14/13 12:45 5ceaff8)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.028817 seconds on emulator to get ready
+[DEBUG] de.appwerft.europom installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
 [INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
@@ -71,13 +76,12 @@ Logfile initialized
 [DEBUG] found splash screen at /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/assets/Resources/default.png
 [TRACE] Writing out AndroidManifest.xml
 [DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/ApplicationStylesheet.java to javac build list
-[DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/AssetCryptImpl.java to javac build list
 [DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomActivity.java to javac build list
 [DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomAppInfo.java to javac build list
 [DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomApplication.java to javac build list
 [DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/Manifest.java to javac build list
 [DEBUG] adding /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/R.java to javac build list
-[DEBUG] Building Java Sources: "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/ApplicationStylesheet.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/AssetCryptImpl.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomActivity.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomAppInfo.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomApplication.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/Manifest.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/R.java"
+[DEBUG] Building Java Sources: "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/ApplicationStylesheet.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomActivity.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomAppInfo.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/EuropomApplication.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/Manifest.java" "/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/gen/de/appwerft/europom/R.java"
 [INFO] Compiling Android Resources... This could take some time
 [DEBUG] Android classes.dex built
 [DEBUG] creating unsigned apk: /Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/build/android/bin/app-unsigned.apk
@@ -108,9 +112,34 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/icon/treeicon.png
 [DEBUG] from resource zip => assets/Resources/icon/user.png
 [DEBUG] from resource zip => assets/Resources/model/events.json
+[DEBUG] from resource zip => assets/Resources/model/pommes.js
 [DEBUG] from resource zip => assets/Resources/model/pommes.json
 [DEBUG] from resource zip => assets/Resources/model/sorten.json
+[DEBUG] from resource zip => assets/Resources/ui/TEMPLATES.js
+[DEBUG] from resource zip => assets/Resources/ui/apfelDB.window.js
+[DEBUG] from resource zip => assets/Resources/ui/apfelfeed.window.js
+[DEBUG] from resource zip => assets/Resources/ui/audioplayer.widget.js
+[DEBUG] from resource zip => assets/Resources/ui/cachedimage.widget.js
+[DEBUG] from resource zip => assets/Resources/ui/detail.window.js
+[DEBUG] from resource zip => assets/Resources/ui/gmap.widget.js
+[DEBUG] from resource zip => assets/Resources/ui/gmap.window.js
+[DEBUG] from resource zip => assets/Resources/ui/kataster.window.js
+[DEBUG] from resource zip => assets/Resources/ui/lectures.detail.window.js
+[DEBUG] from resource zip => assets/Resources/ui/lectures.window.js
+[DEBUG] from resource zip => assets/Resources/ui/progress.widget.js
+[DEBUG] from resource zip => assets/Resources/ui/remotepdfviewer.js
+[DEBUG] from resource zip => assets/Resources/ui/tabgroup.js
+[DEBUG] from resource zip => assets/Resources/ui/web.window.js
+[DEBUG] from resource zip => assets/Resources/vendor/XMLTools.js
+[DEBUG] from resource zip => assets/Resources/vendor/cachedxhr.js
+[DEBUG] from resource zip => assets/Resources/vendor/google.oauth.js
+[DEBUG] from resource zip => assets/Resources/vendor/multisocial.api.js
+[DEBUG] from resource zip => assets/Resources/vendor/oauth.adapter.js
+[DEBUG] from resource zip => assets/Resources/vendor/oauth.lib.js
+[DEBUG] from resource zip => assets/Resources/vendor/ti.kenburns.js
+[DEBUG] from resource zip => assets/Resources/vendor/video.widget.js
 [DEBUG] from resource zip => assets/Resources/512.png
+[DEBUG] from resource zip => assets/Resources/app.js
 [DEBUG] from resource zip => assets/Resources/appicon.png
 [DEBUG] from resource zip => assets/Resources/default.png
 [DEBUG] from resource zip => assets/app.json
@@ -152,3 +181,11 @@ Logfile initialized
 [DEBUG] installing native lib: /Library/Application Support/Titanium/modules/android/ti.map/2.1.2/libs/armeabi-v7a/libti.map.so
 [DEBUG] installing native lib: /Library/Application Support/Titanium/modules/android/ti.map/2.1.2/libs/x86/libti.map.so
 [DEBUG] installing native SDK libs
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.031191 seconds on emulator to get ready
+[INFO] Installing application on device
+[ERROR] Failed installing de.appwerft.europom: 	pkg: /data/local/tmp/app.apk
+Failure [INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES]
+

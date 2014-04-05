@@ -6,9 +6,8 @@ exports.create = function(_event) {
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
 		title : event.title,
-		navBarHidden : true,
+		navBarHidden : false,
 		backgroundColor : 'white',
-		barColor : '#040'
 	});
 	setTimeout(function() {
 		self.add(Ti.UI.createImageView({
@@ -106,18 +105,22 @@ exports.create = function(_event) {
 					width : Ti.UI.FILL,
 					backgroundColor : '#666',
 					contentWidth : Ti.UI.SIZE,
-					//	layout : 'horizontal',
+					horizontalWrap : false,
+					layout : 'horizontal',
 					contentHeight : '100dp'
 				});
 				var path = event.slides.replace(/\.pdf/gi, '');
 				self.add(gallery);
-				for (var i = 0; i < event.thumbs; i++) {
+				for (var i = 0; i < event.thumbs && i < 32; i++) {
+					var url = path + '-' + i + '.png';
+					// output of imagemagick
+					console.log(url);
 					var thumb = Ti.UI.createImageView({
 						height : Ti.UI.FILL,
-						width : Ti.UI.SIZE,
-						left : i * 136 + 'dp',
+						width : '100dp',
+						left : 0,
 						top : 0,
-						image : path + '-' + i + '.png' // output of imagemagick
+						image : url
 					});
 					gallery.add(thumb);
 				}
@@ -131,6 +134,18 @@ exports.create = function(_event) {
 
 		};
 	}, 10);
-
+	self.addEventListener('open', function() {
+		if (Ti.Android) {
+			if (self.activity) {
+				var actionBar = self.activity.actionBar;
+				if (actionBar) {
+					actionBar.displayHomeAsUp = true;
+					actionBar.onHomeIconItemSelected = function() {
+						self.close();
+					};
+				}
+			}
+		}
+	});
 	return self;
 };

@@ -1,34 +1,47 @@
 exports.create = function() {
 	Ti.UI.backgroundImage = '/assets/bg.png';
-	var tabGroup = Titanium.UI.createTabGroup({
-		backgroundColor : 'white',
-		navBarHidden : true,
+	var self = Ti.UI.createTabGroup({
+		navBarHidden : false,
+		backgroundColor : '#070',
 		fullscreen : true,
+		title : 'europom2013 in Hamburg',
 		exitOnClose : true
 	});
-	var tab1 = Titanium.UI.createTab({
-		title : 'Vorlesungen',
-		icon : 'icon/user.png',
+	var tab1 = Ti.UI.createTab({
+		title : 'Vorträge',
 		window : require('ui/lectures.window').create()
 	});
-	var tab2 = Titanium.UI.createTab({
+	var tab2 = Ti.UI.createTab({
 		title : 'Äpfel-DB',
-		icon : 'icon/plant.png',
 		window : require('ui/apfelDB.window').create()
 	});
-	var tab3 = Titanium.UI.createTab({
+	var tab3 = Ti.UI.createTab({
 		title : 'Lageplan',
-		icon : 'icon/mapmarker.png',
 		window : require('ui/gmap.window').create()
 	});
-	var tab4 = Titanium.UI.createTab({
-		title : 'Nachrichten',
-		icon : 'icon/pvicon.png',
+	var tab4 = Ti.UI.createTab({
+		title : 'Vereinsnews',
 		window : require('ui/apfelfeed.window').create()
 	});
-	tabGroup.addTab(tab1);
-	tabGroup.addTab(tab3);
-	tabGroup.addTab(tab4);
-	tabGroup.addTab(tab2);
-	return tabGroup;
+	self.addTab(tab1);
+	self.addTab(tab3);
+	self.addTab(tab4);
+	self.addTab(tab2);
+	self.addEventListener('open', function() {
+		if (Ti.Android) {
+			self.activity = self.getActivity();
+			self.actionBar = self.activity.actionBar;
+			if (self.actionBar) {
+				self.activity.onCreateOptionsMenu = function(e) {
+					e.menu.clear();
+					e.activity = self.activity;
+					e.actionBar = self.actionBar;
+					self.activeTab && self.activeTab.fireEvent('onCreateOptionsMenu', e);
+				};
+				self.actionBar.setTitle('EUROPOM2013');
+				self.activity.invalidateOptionsMenu();
+			}
+		}
+	});
+	return self;
 };

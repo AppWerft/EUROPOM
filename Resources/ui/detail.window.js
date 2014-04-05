@@ -4,9 +4,8 @@ const MINIBASEURL = 'http://www.apfelsorten.ch/images/apfelsorten/thumbnails/';
 exports.create = function(_pom) {
 	var pomme = JSON.parse(_pom);
 	var self = Ti.UI.createWindow({
-		modal : true,
+		fullscreen : true,
 		title : pomme.title,
-		backgroundColor : 'white'
 	});
 	var views = [];
 	for (var i = 0; i < pomme.pics.length; i++) {
@@ -22,6 +21,18 @@ exports.create = function(_pom) {
 		top : 0,
 		views : views
 	});
-	self.add(self.scroller);
+	self.add(self.scroller);self.addEventListener('open', function() {
+		if (Ti.Android) {
+			if (self.activity) {
+				var actionBar = self.activity.actionBar;
+				if (actionBar) {
+					actionBar.displayHomeAsUp=true;
+					actionBar.onHomeIconItemSelected = function() {
+						self.close();
+					};
+				}
+			}
+		}
+	});
 	return self;
 };

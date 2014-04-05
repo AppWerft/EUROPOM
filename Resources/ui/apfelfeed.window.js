@@ -14,8 +14,10 @@ exports.create = function() {
 	});
 	self.add(self.listView);
 	self.listView.addEventListener('itemclick', function(_e) {
-		if (Ti.Android)require('ui/web.window').create(_e.itemId).open();
-		else self.tab.open(require('ui/web.window').create(_e.itemId));
+		if (Ti.Android)
+			require('ui/web.window').create(_e.itemId).open();
+		else
+			self.tab.open(require('ui/web.window').create(_e.itemId));
 	});
 	var updateFeed = function() {
 		require('vendor/cachedxhr').get({
@@ -31,29 +33,36 @@ exports.create = function() {
 				}
 				var items = (_data.channel.item && _data.channel.item.isArray) ? _data.channel.item : [];
 				var data = [];
+				var regex = /<img src="(.*?)"/gm, pic;
 				if (items.isArray)
 					for (var i = 0; i < items.length; i++) {
-						var description= items[i].description.replace(/\.\.\./,' …');
+						var item = items[i];
+						var description = item.description.replace(/\.\.\./, ' …');
+						var res = regex.exec(item['content:encoded']);
+						if (res) {
+							pic = 'http://pomologen-verein.de/'+res[1];
+						} else pic =null;
 						console.log(description);
 						data.push({
 							title : {
-								text : items[i].title
+								text : item.title
 							},
-							text : {
-								text : description
+							description : {
+								text : ''+description
 							},
-							
+							pic : {
+								image : pic
+							},
 							properties : {
 								itemId : JSON.stringify(items[i]),
 								accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
 							}
 						});
 					}
-					console.log(data);
 				sections.push(Ti.UI.createListSection({
 					items : data
 				}));
-				
+
 				self.listView.setSections(sections);
 			}
 		});

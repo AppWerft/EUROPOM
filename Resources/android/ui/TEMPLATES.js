@@ -201,13 +201,9 @@ exports.feedrow = {
 		type : 'Ti.UI.View',
 		properties : {
 			width : Ti.UI.FILL,
-			left : "95dp",
+			left : "110dp",
 			right : '10dp',
 			layout : 'vertical',
-		},
-		events : {
-			click : function() {
-			}
 		},
 		childTemplates : [{
 			type : 'Ti.UI.Label',
@@ -222,17 +218,13 @@ exports.feedrow = {
 					fontFamily : 'Vollkorn-Regular'
 				},
 				height : Ti.UI.SIZE,
-			},
-			events : {
-				'click' : function() {
-				}
 			}
 		}, {
 			type : 'Ti.UI.Label',
 			bindId : 'description',
 			properties : {
 				left : 0,
-				top : '5dp',
+				top :0,	
 				bottom : '10dp',
 				color : 'black',
 				textAlign : 'left',
@@ -251,16 +243,10 @@ exports.feedrow = {
 		bindId : 'pic',
 		properties : {
 			left : 0,
-			image : '/assets/pmlv.png',
+			defaultImage : '/assets/pmlv.png',
 			top : '10dp',
-			width : '90dp',
-			height : '90dp',
+			width : '105dp',
 			height : Ti.UI.SIZE
-		},
-		events : {
-			click : function() {
-			}
 		}
-
 	}]
 };

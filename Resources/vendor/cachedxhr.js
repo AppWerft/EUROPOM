@@ -12,7 +12,7 @@ exports.get = function(_options) {
 			md5 = Ti.Utils.md5HexDigest(JSON.stringify(data));
 			_options.onload && _options.onload(data);
 		} catch(E) {
-			Ti.App.Properties.removeProperty(key)
+			Ti.App.Properties.removeProperty(key);
 			console.log('saved data kaputt');
 		}
 	}
@@ -26,20 +26,22 @@ exports.get = function(_options) {
 		onload : function(e) {
 			var data;
 			if (this.responseText.match(/<\?xml/)) {
-				console.log('Info: received data are XML: ' + this.responseText.length);
-				Ti.Android && Ti.Android.createNotification({
-					message : 'XML Daten empfangen'
+				
+				var xml = this.responseText.replace(/&amp;/gm,'&')
+					.replace(/&nbsp;/gm,' ').replace(/&bdquo;/gm,'„').replace(/&rdquo;/gm,'“')
+					.replace(/&auml;/gm,'ä').replace(/&ouml;/gm,'ö').replace(/&uuml;/gm,'ü')
+					.replace(/&Auml;/gm,'Ä').replace(/&Ouml;/gm,'Ö').replace(/&Uuml;/gm,'Ü')
+					.replace(/&szlig;/gm,'ß');
+				Ti.Android && Ti.UI.createNotification({
+					message : 'Apfelnachrichten aktualisiert'
 				}).show();
 				var XMLTools = require("vendor/XMLTools");
-				var xmltools = new XMLTools(this.responseText);
+				var xmltools = new XMLTools(xml);
 				data = xmltools.toObject();
 			} else {
 				console.log('Info: received data is JSON: ' + this.responseText.length / 1000 + 'kB');
 				try {
 					data = JSON.parse(this.responseText);
-					Ti.Android && Ti.UI.createNotification({
-						message : 'JSON-Daten empfangen'
-					}).show();
 				} catch(E) {
 					console.log('Info: received data is JSON and invalide: ' + E);
 					return;

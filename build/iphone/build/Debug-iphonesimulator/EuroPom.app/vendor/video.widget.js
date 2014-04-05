@@ -1,1 +1,0 @@
-/Users/rainerschleevoigt/Documents/TitaniumStudioWorkspace/Europom/Resources/vendor/video.widget.js

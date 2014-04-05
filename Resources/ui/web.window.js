@@ -1,11 +1,13 @@
 exports.create = function(_data) {
 	var data = JSON.parse(_data);
+	var html = data['content:encoded'].replace(/uploads\/pics\//gm, 'http://pomologen-verein.de/uploads/pics/');
+	console.log(html);
 	var self = Ti.UI.createWindow({
 		backgroundColor : 'white',
 		title : data.title,
-		fullscreen : false
+		fullscreen : true
 	});
-	if (Ti.Android) {
+	if (!Ti.Android) {
 		var container = Ti.UI.createScrollView({
 			height : Ti.UI.FILL,
 			width : Ti.UI.FILL,
@@ -19,7 +21,7 @@ exports.create = function(_data) {
 				fontWeight : 'bold',
 				fontFamily : 'Vollkorn-Regular'
 			},
-			html : data['content:encoded'],
+			html : html,
 			color : '#464',
 			width : Ti.UI.FILL,
 			top : '10dp',
@@ -36,10 +38,23 @@ exports.create = function(_data) {
 		var container = Ti.UI.createWebView({
 			height : Ti.UI.FILL,
 			width : Ti.UI.FILL,
-			html : data['content:encoded']
+			html : html
 		});
 		self.add(container);
 	}
+	self.addEventListener('open', function() {
+		if (Ti.Android) {
+			if (self.activity) {
+				var actionBar = self.activity.actionBar;
+				if (actionBar) {
+					actionBar.displayHomeAsUp = true;
+					actionBar.onHomeIconItemSelected = function() {
+						self.close();
+					};
+				}
+			}
+		}
+	});
 	return self;
 
 };
