@@ -18,7 +18,7 @@
     <guid>93e4e604-da8a-4883-9615-1c23b1a1e239</guid>
     <property name="ti.ui.defaultunit" type="string">system</property>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-    	<tool-api-level>14</tool-api-level>
+        <tool-api-level>14</tool-api-level>
         <manifest android:versionCode="121" android:versionName="1.2.1"
             package="de.appwerft.europom" xmlns:android="http://schemas.android.com/apk/res/android">
             <!--<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="16"/>-->
@@ -41,8 +41,7 @@
                 <activity android:configChanges="keyboardHidden"
                     android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
             </application>
-            <uses-sdk android:minSdkVersion="14"
-            android:targetSdkVersion="16"/>
+            <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="16"/>
         </manifest>
     </android>
     <iphone>
@@ -68,6 +67,6 @@
         <target device="mobileweb">false</target>
         <target device="tizen">false</target>
     </deployment-targets>
-    <sdk-version>3.2.2.GA</sdk-version>
+    <sdk-version>3.2.3.GA</sdk-version>
     <property name="ti.deploytype">test</property>
 </ti:app>
